@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI & Agentic Workflows | Multimodal Parsing & Continuous Freshness | Wiser Workflows</title>
+  <meta name="description"
+    content="Turn complex PDFs, blueprints, and handwritten logs into zero-hallucination structured JSON. Enterprise multimodal vision pipelines with continuous data freshness.">
+  <meta name="keywords"
+    content="multimodal AI, vision OCR, document intelligence, agentic workflows, Change Data Capture, vector indexing, Gemini 2.0, Claude 3.5 Sonnet, Wiser Workflows">
+  <meta name="author" content="Wiser Workflows">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="AI & Agentic Workflows | Wiser Workflows">
+  <meta property="og:description"
+    content="Turn complex PDFs, blueprints, and handwritten logs into zero-hallucination structured JSON with continuous data freshness.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wiserworkflows.com/ai-workflows.html">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sitemap.css">
+  <link rel="stylesheet" href="css/ai-workflows.css">
+</head>
+
+<body>
+  <div class="grid-bg"></div>
+
+  <!-- =========================================================================
+       Site Header
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" id="brand-home-link">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+          </svg>
+        </div>
+        <span>Wiser<span>Workflows</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="primary-nav-menu">
+          <li><a href="index.html#services" class="nav-link">Solutions</a></li>
+          <li><a href="#vision-lab" class="nav-link">Vision & OCR Lab</a></li>
+          <li><a href="#freshness-engine" class="nav-link">Freshness Engine</a></li>
+          <li><a href="#architecture" class="nav-link">Architecture</a></li>
+          <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+          <li><a href="index.html#calculator" class="nav-link">ROI Calculator</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog"
+          target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="header-audit-cta">
+          <span>Book Free Audit</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         Hero Section
+         ========================================================================= -->
+    <section class="page-hero" id="hero">
+      <div class="container">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+          <div class="hero-badge" style="margin-bottom: 1.5rem; display: inline-flex;">
+            <span class="pulse-dot"></span>
+            <span>Multimodal Document Intelligence & Continuous Data Freshness</span>
+          </div>
+
+          <h1 class="hero-title" style="font-size: clamp(2.3rem, 5vw, 3.8rem); line-height: 1.15; margin-bottom: 1.5rem;">
+            From Unstructured Chaos to <br>
+            <span class="text-gradient">Zero-Hallucination Verified Data</span>.
+          </h1>
+
+          <p class="hero-description" style="font-size: 1.15rem; max-width: 780px; margin: 0 auto 2rem; color: var(--text-muted);">
+            Deploy enterprise AI pipelines combining state-of-the-art multimodal vision models (Gemini 2.0, Claude 3.5 Sonnet, GPT-4o) with strict Pydantic/Zod schemas and real-time Change-Data-Capture. We turn messy invoices, CAD blueprints, and handwritten logs into deterministic, synchronized JSON.
+          </p>
+
+          <div class="hero-cta-group" style="justify-content: center; gap: 1rem; margin-bottom: 2rem;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog"
+              target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" id="hero-primary-cta">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              <span>Book Your AI Workflow Audit</span>
+            </a>
+
+            <a href="#vision-lab" class="btn btn-secondary btn-lg" id="hero-lab-cta">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span>Explore Vision Lab Demo</span>
+            </a>
+          </div>
+
+          <!-- Key Metrics Strip -->
+          <div class="hero-stats-strip">
+            <div class="stat-item">
+              <span class="stat-value">99.94%</span>
+              <span class="stat-label">Deterministic Field Accuracy</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">&lt; 740ms</span>
+              <span class="stat-label">End-to-End Multimodal Latency</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Zero-Stale Vector Freshness</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">0 Hours</span>
+              <span class="stat-label">Manual Data Entry Required</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 1: Live Document Upload & Multimodal Parsing Studio
+         ========================================================================= -->
+    <section class="section" id="vision-lab" style="background: #faf8f5;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 2.5rem;">
+          <div class="section-tag">Live Interactive Demo</div>
+          <h2 class="section-title">Test Your Own Document <span class="text-gradient">in Real Time</span></h2>
+          <p>
+            Drop any invoice, blueprint, schematic, or handwritten form below. Watch our autonomous multimodal vision agent parse and structure the data instantly with zero manual entry.
+          </p>
+        </div>
+
+        <!-- Interactive Upload & Parser Studio -->
+        <div class="lab-container">
+          <!-- Hidden Native File Input -->
+          <input type="file" id="doc-file-input" accept="image/*,application/pdf" style="display: none;">
+
+          <!-- Upload Drop Zone (Initial State) -->
+          <div class="upload-dropzone" id="upload-dropzone">
+            <div class="upload-icon-circle">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+            </div>
+            <h3 class="upload-title">Drop your document here, or <span class="upload-browse-link">browse files</span></h3>
+            <p class="upload-subtitle">Supports PDF, PNG, JPG, TIFF, CAD & Handwritten Forms • 100% Client-Side Simulation</p>
+
+            <div class="sample-pills-row">
+              <span class="sample-label">Or test with a sample:</span>
+              <button class="sample-pill-btn" data-preset="freight-invoice">
+                <span>📄 Freight Invoice</span>
+              </button>
+              <button class="sample-pill-btn" data-preset="blueprint">
+                <span>📐 CAD Blueprint</span>
+              </button>
+              <button class="sample-pill-btn" data-preset="schematic">
+                <span>⚙️ P&ID Schematic</span>
+              </button>
+              <button class="sample-pill-btn" data-preset="handwritten-log">
+                <span>✍️ Handwritten Log</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Active Result Viewport (Side-by-Side: Document vs Verified Output) -->
+          <div class="lab-viewport" id="lab-active-viewport" style="display: none;">
+            <!-- Left Column: Input Document Preview -->
+            <div class="doc-canvas-pane">
+              <div class="pane-header">
+                <div class="pane-title-wrap">
+                  <span class="pane-step-badge">1</span>
+                  <div>
+                    <h3 class="pane-title" id="active-doc-title">Input Document Preview</h3>
+                    <div class="pane-subtitle" id="active-doc-subtitle">PDF • Multi-Currency Freight Invoice</div>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 0.5rem;">
+                  <button class="toggle-chip" id="upload-another-btn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+                    </svg>
+                    <span>Test Another File</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Rendered Document Viewport -->
+              <div class="document-frame" id="doc-render-container">
+                <!-- Laser Scan Line -->
+                <div class="laser-scan-bar" id="laser-bar"></div>
+                <!-- Content dynamically populated by JS -->
+              </div>
+            </div>
+
+            <!-- Right Column: Verified Structured Output -->
+            <div class="inspector-pane">
+              <div class="pane-header dark-header">
+                <div class="pane-title-wrap">
+                  <span class="pane-step-badge green-badge">2</span>
+                  <div>
+                    <h3 class="pane-title" style="color: #ffffff;">Verified Structured Output</h3>
+                    <div class="pane-subtitle" style="color: #94a3b8;">Deterministic Pydantic / Zod Schema</div>
+                  </div>
+                </div>
+
+                <div class="inspector-header-right">
+                  <!-- Segmented View Toggle (Summary vs JSON) -->
+                  <div class="segmented-toggle">
+                    <button class="seg-btn active" data-tab="summary">Verified Summary</button>
+                    <button class="seg-btn" data-tab="json">Raw JSON</button>
+                  </div>
+
+                  <button class="icon-action-btn" id="copy-output-btn" title="Copy data to clipboard">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Code View Area -->
+              <div class="tab-content-area" id="inspector-content-area">
+                <!-- Dynamically populated by JS -->
+              </div>
+
+              <!-- Lab Metrics Footer -->
+              <div class="lab-footer">
+                <div class="schema-valid-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Schema Pass (0 Errors)</span>
+                </div>
+                <div class="lab-footer-metrics">
+                  <span>Latency: <strong id="lab-latency-badge" style="color: #ffffff;">740ms</strong></span>
+                  <span>Accuracy: <strong id="lab-accuracy-badge" style="color: #34d399;">99.98%</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 2: Continuous Data Freshness Engine (Methodology & Live Engine)
+         ========================================================================= -->
+    <section class="section" id="freshness-engine">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+          <div class="section-tag">Zero-Stale Vector Architecture</div>
+          <h2 class="section-title">Continuous <span class="text-gradient">Data Freshness Engine</span></h2>
+          <p>
+            Traditional RAG systems fail when downstream databases or documents change. Our continuous freshness methodology eliminates knowledge drift through real-time Change-Data-Capture and sub-second cache invalidation.
+          </p>
+        </div>
+
+        <div class="freshness-engine-wrap">
+          <div class="freshness-header">
+            <div>
+              <span class="badge badge-live" style="margin-bottom: 0.5rem;">Event-Driven Sync Mesh</span>
+              <h3 style="font-size: 1.6rem; color: var(--text-main); margin-top: 0.25rem;">
+                From Database Mutation to Agent Context in &lt; 350ms
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 650px;">
+                Watch how modifications propagate through our 4-stage streaming engine without requiring slow, expensive vector index rebuilds.
+              </p>
+            </div>
+
+            <button class="btn btn-primary" id="trigger-freshness-sim-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+              </svg>
+              <span>Simulate Live Data Mutation</span>
+            </button>
+          </div>
+
+          <!-- 4-Stage Stepper Pipeline -->
+          <div class="pipeline-stepper">
+            <!-- Stage 1 -->
+            <div class="pipeline-step-card" data-step="0">
+              <div class="step-num-pill">1</div>
+              <div class="step-icon">⚡</div>
+              <h4 class="step-title">Event Trigger & Webhook</h4>
+              <p class="step-desc">
+                Sub-second capture of external ERP updates, customer portal uploads, or database write commits.
+              </p>
+              <div class="step-latency-tag">+32ms avg</div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="pipeline-step-card" data-step="1">
+              <div class="step-num-pill">2</div>
+              <div class="step-icon">🔍</div>
+              <h4 class="step-title">Change-Data-Capture (CDC)</h4>
+              <p class="step-desc">
+                Debezium/Kafka log tailing detects mutated rows and generates isolated delta diffs without full-table scans.
+              </p>
+              <div class="step-latency-tag">+85ms avg</div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="pipeline-step-card" data-step="2">
+              <div class="step-num-pill">3</div>
+              <div class="step-icon">🧠</div>
+              <h4 class="step-title">Incremental Vector Re-Index</h4>
+              <p class="step-desc">
+                Only dirty document chunks are re-embedded and upserted into Qdrant/pgvector hybrid dense-sparse indexes.
+              </p>
+              <div class="step-latency-tag">+240ms avg</div>
+            </div>
+
+            <!-- Stage 4 -->
+            <div class="pipeline-step-card" data-step="3">
+              <div class="step-num-pill">4</div>
+              <div class="step-icon">🔄</div>
+              <h4 class="step-title">Cache Purge & Agent Sync</h4>
+              <p class="step-desc">
+                Redis semantic query cache is purged and active AI agent conversation memories are synchronized atomically.
+              </p>
+              <div class="step-latency-tag">+310ms total</div>
+            </div>
+          </div>
+
+          <!-- Live Output Console -->
+          <div class="simulation-console">
+            <div class="console-header">
+              <span>Streaming Event Log (Real-Time CDC Bus)</span>
+              <span>Bus Status: <span style="color: #34d399;">CONNECTED</span></span>
+            </div>
+            <ul class="console-log-list" id="freshness-log-list">
+              <li class="log-entry">
+                <span class="log-ts">[Ready]</span> System awaiting mutation event trigger. Click "Simulate Live Data Mutation" to test.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 3: Enterprise Architecture & Multi-Agent Orchestration
+         ========================================================================= -->
+    <section class="section" id="architecture" style="background: #faf8f5;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+          <div class="section-tag">Robust & Fault-Tolerant</div>
+          <h2 class="section-title">Enterprise <span class="text-gradient">Multi-Agent Architecture</span></h2>
+          <p>
+            Autonomous execution without uncontrolled loops. We build strict supervisor trees with deterministic verification agents, security guardrails, and seamless human-in-the-loop escalation.
+          </p>
+        </div>
+
+        <div class="arch-diagram-card">
+          <div class="arch-layer-grid">
+            <!-- Layer 1: Security & Guardrails -->
+            <div class="arch-layer">
+              <div class="layer-tag">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>Layer 1: Ingestion & Security Guardrails</span>
+              </div>
+              <div class="layer-nodes-row">
+                <div class="arch-node">
+                  <div class="arch-node-title">🔒 PII & Sensitive Data Redactor</div>
+                  <div class="arch-node-desc">Automated masking of SSNs, IBANs, and patient data before LLM context ingestion.</div>
+                </div>
+                <div class="arch-node">
+                  <div class="arch-node-title">🛡️ Prompt Injection Shield</div>
+                  <div class="arch-node-desc">Semantic input sanitization preventing jailbreak vectors embedded in untrusted PDFs.</div>
+                </div>
+                <div class="arch-node">
+                  <div class="arch-node-title">📐 High-Res Vector Rasterizer</div>
+                  <div class="arch-node-desc">300 DPI spatial tile decomposition for large CAD blueprints and multi-page schematics.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Layer 2: Multi-Agent Orchestration -->
+            <div class="arch-layer">
+              <div class="layer-tag">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <span>Layer 2: Multi-Agent Decomposition & Verification</span>
+              </div>
+              <div class="layer-nodes-row">
+                <div class="arch-node">
+                  <div class="arch-node-title">🤖 Planner & Triage Agent</div>
+                  <div class="arch-node-desc">Classifies document topology and routes sub-tasks to specialized vision extractors.</div>
+                </div>
+                <div class="arch-node">
+                  <div class="arch-node-title">👁️ Vision OCR Specialist</div>
+                  <div class="arch-node-desc">Extracts tabular matrices, bounding anchors, and handwritten cursive telemetry.</div>
+                </div>
+                <div class="arch-node">
+                  <div class="arch-node-title">⚖️ Schema Verification Critic</div>
+                  <div class="arch-node-desc">Runs deterministic mathematical reconciliation and Zod schema type validation.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Layer 3: Storage & Downstream Integration -->
+            <div class="arch-layer">
+              <div class="layer-tag">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+                <span>Layer 3: Real-Time Vector Mesh & Enterprise Sync</span>
+              </div>
+              <div class="layer-nodes-row">
+                <div class="arch-node">
+                  <div class="arch-node-title">⚡ Hybrid Vector Store (Qdrant)</div>
+                  <div class="arch-node-desc">HNSW dense embeddings + BM25 sparse lexical search with sub-10ms query times.</div>
+                </div>
+                <div class="arch-node">
+                  <div class="arch-node-title">🔄 2-Way Enterprise API Sync</div>
+                  <div class="arch-node-desc">Direct transactional writes into Salesforce, HubSpot, SAP, NetSuite, and Snowflake.</div>
+                </div>
+                <div class="arch-node">
+                  <div class="arch-node-title">📊 OpenTelemetry Observability</div>
+                  <div class="arch-node-desc">Complete token tracing, latency metrics, and audit log replayability.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- HITL Threshold Setting -->
+          <div class="hitl-box">
+            <div>
+              <div class="badge badge-tag" style="margin-bottom: 0.5rem;">Human-In-The-Loop (HITL) Guardrail</div>
+              <h4 style="font-size: 1.25rem; color: var(--text-main); margin-bottom: 0.5rem;">
+                Configurable Confidence Escalation Threshold
+              </h4>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+                When any individual field confidence drops below the configured threshold, the pipeline automatically dispatches a 1-click review task to Slack, Microsoft Teams, or your internal dashboard.
+              </p>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <label for="hitl-threshold-slider" style="font-size: 0.88rem; font-weight: 700; color: var(--text-main);">
+                  Confidence Threshold:
+                </label>
+                <span id="hitl-threshold-value" class="slider-value-badge" style="background: rgba(226, 114, 91, 0.12); color: var(--accent-cyan); border-color: var(--accent-cyan);">95%</span>
+              </div>
+              <input type="range" id="hitl-threshold-slider" min="80" max="99" value="95" style="width: 100%;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-muted); margin-top: 0.75rem;">
+                <span>Straight-Through Automation: <strong id="hitl-auto-rate" style="color: var(--accent-emerald);">96.8%</strong></span>
+                <span>Human Review Queue: <strong id="hitl-review-rate" style="color: var(--accent-cyan);">3.2%</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 4: Enterprise Case Studies & Quantitative Proof
+         ========================================================================= -->
+    <section class="section" id="case-studies">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+          <div class="section-tag">Proven Results</div>
+          <h2 class="section-title">Engineered for <span class="text-gradient">Real-World Scale</span></h2>
+          <p>
+            See how enterprise leaders eliminate manual data entry, accelerate turnaround times, and achieve zero-drift AI workflows.
+          </p>
+        </div>
+
+        <div class="case-study-grid">
+          <!-- Case 1 -->
+          <div class="case-study-card">
+            <div class="badge badge-live" style="margin-bottom: 1rem; align-self: flex-start;">Global Freight & Logistics</div>
+            <div class="case-metric-highlight">180K Docs / Mo</div>
+            <h3 style="font-size: 1.25rem; color: var(--text-main); margin-bottom: 0.75rem;">
+              Customs & Bill of Lading Autonomous Parser
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; flex-grow: 1; margin-bottom: 1.5rem;">
+              Replaced a 45-person manual data entry team with our multimodal pipeline. Processing time plummeted from 28 minutes to 4.2 seconds with 99.98% tax and tariff classification accuracy.
+            </p>
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem; font-size: 0.82rem; color: var(--text-dim);">
+              <strong>Stack:</strong> Gemini 2.0 Flash • Debezium CDC • Qdrant • SAP ERP
+            </div>
+          </div>
+
+          <!-- Case 2 -->
+          <div class="case-study-card">
+            <div class="badge badge-planned" style="margin-bottom: 1rem; align-self: flex-start;">Commercial AEC / Construction</div>
+            <div class="case-metric-highlight">140 Hrs Saved / Bid</div>
+            <h3 style="font-size: 1.25rem; color: var(--text-main); margin-bottom: 0.75rem;">
+              Architectural CAD & Opening Schedule Extraction
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; flex-grow: 1; margin-bottom: 1.5rem;">
+              Automated the extraction of door, window, and structural beam schedules from 200+ page blueprint sets. Reduced bid preparation time from 2 weeks to under 3 hours.
+            </p>
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem; font-size: 0.82rem; color: var(--text-dim);">
+              <strong>Stack:</strong> Claude 3.5 Sonnet • Spatial Tile Decomposition • Procore Sync
+            </div>
+          </div>
+
+          <!-- Case 3 -->
+          <div class="case-study-card">
+            <div class="badge badge-expansion" style="margin-bottom: 1rem; align-self: flex-start;">Energy & Substation Utilities</div>
+            <div class="case-metric-highlight">12,000+ Logs Digitized</div>
+            <h3 style="font-size: 1.25rem; color: var(--text-main); margin-bottom: 0.75rem;">
+              Handwritten Field Log & Anomaly Detector
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; flex-grow: 1; margin-bottom: 1.5rem;">
+              Digitized messy paper inspection sheets from 48 regional substations. Automated thermal variance detection and triggered predictive maintenance work orders in Maximo.
+            </p>
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem; font-size: 0.82rem; color: var(--text-dim);">
+              <strong>Stack:</strong> GPT-4o Vision • Few-Shot Handwriting Adapters • IBM Maximo
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 5: High-Converting Audit CTA
+         ========================================================================= -->
+    <section class="section" style="background: var(--gradient-emerald); color: #ffffff; position: relative; overflow: hidden;">
+      <div class="container" style="position: relative; z-index: 2;">
+        <div style="max-width: 820px; margin: 0 auto; text-align: center;">
+          <div class="badge" style="background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); margin-bottom: 1.5rem;">
+            Free 15-Minute Engineering Review
+          </div>
+
+          <h2 style="font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.25rem; color: #ffffff;">
+            Ready to Eliminate Unstructured Document Chaos?
+          </h2>
+
+          <p style="font-size: 1.15rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 2.25rem; line-height: 1.6;">
+            Book a complimentary 15-minute AI Workflow Audit. Our systems architects will evaluate your document bottlenecks, assess model feasibility, and design a custom zero-hallucination pipeline blueprint.
+          </p>
+
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog"
+              target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="background: #ffffff; color: var(--accent-indigo); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              <span>Book Your AI Workflow Audit (Google Form)</span>
+            </a>
+
+            <button class="btn btn-secondary btn-lg" data-open-modal="audit-modal" style="background: rgba(255, 255, 255, 0.12); color: #ffffff; border-color: rgba(255, 255, 255, 0.3);">
+              <span>Request Custom Blueprint</span>
+            </button>
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.8); flex-wrap: wrap;">
+            <span>✓ 100% Free Consultation</span>
+            <span>✓ Zero Vendor Lock-In</span>
+            <span>✓ Enterprise NDAs Supported</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Site Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+              </svg>
+            </div>
+            <span>Wiser<span>Workflows</span></span>
+          </a>
+          <p>Empowering forward-thinking companies to scale efficiently through custom AI agents, automated operations,
+            and bulletproof integrations.</p>
+        </div>
+
+        <!-- Col 2: Solutions -->
+        <div class="footer-col">
+          <h5>Solutions</h5>
+          <ul class="footer-links">
+            <li><a href="ai-workflows.html" style="color: var(--accent-cyan); font-weight: 600;">AI & Agentic Workflows</a></li>
+            <li><a href="crm-pipeline.html">CRM & Sales Pipelines</a></li>
+            <li><a href="api-sync.html">Cross-Platform API Sync</a></li>
+            <li><a href="data-dashboards.html">Data & Executive BI</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Architecture & Tools -->
+        <div class="footer-col">
+          <h5>Architecture</h5>
+          <ul class="footer-links">
+            <li><a href="index.html#calculator">ROI & Savings Calculator</a></li>
+            <li><a href="index.html#process">Our 4-Step Process</a></li>
+            <li><a href="#vision-lab">Multimodal Vision Lab</a></li>
+            <li><a href="#freshness-engine">CDC Freshness Engine</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact / Audit -->
+        <div class="footer-col">
+          <h5>Free Consultation</h5>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;">Get an engineering-backed review of your manual
+            bottlenecks.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog"
+            target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width: 100%;">
+            Book 15-Min Audit
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Wiser Workflows. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: var(--text-dim);">Privacy Policy</a>
+          <a href="#" style="color: var(--text-dim);">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Audit Consultation Modal (Lead Capture)
+       ========================================================================= -->
+  <div class="modal-backdrop" id="audit-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div style="margin-bottom: 1.75rem;">
+        <span class="badge badge-live" style="margin-bottom: 0.5rem;">Free 15-Minute Consultation</span>
+        <h3 id="modal-title" style="color: var(--text-main); font-size: 1.65rem; margin-top: 0.35rem;">Claim Your
+          Workflow Audit</h3>
+        <p style="font-size: 0.95rem;">Tell us about your team's biggest bottlenecks and we'll prepare a custom
+          automation blueprint.</p>
+      </div>
+
+      <form id="audit-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="audit-name">Full Name *</label>
+            <input type="text" id="audit-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="audit-email">Work Email *</label>
+            <input type="email" id="audit-email" class="form-input" placeholder="alex@company.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="audit-company">Company / Team Size</label>
+            <select id="audit-company" class="form-select">
+              <option value="1-10">1 - 10 employees</option>
+              <option value="11-50" selected>11 - 50 employees</option>
+              <option value="51-200">51 - 200 employees</option>
+              <option value="200+">200+ employees</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="audit-service-interest">Primary Focus Area</label>
+            <select id="audit-service-interest" class="form-select">
+              <option value="ai-agents" selected>Custom AI Agents & Document Intelligence</option>
+              <option value="crm-sales">CRM & Sales Pipeline Automation</option>
+              <option value="api-sync">Cross-App Data & Financial Sync</option>
+              <option value="full-audit">Comprehensive Operational Audit</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="audit-bottleneck">What repetitive process wastes the most team time right
+            now?</label>
+          <textarea id="audit-bottleneck" class="form-textarea" rows="3"
+            placeholder="e.g. Invoices, blueprints, or documents requiring manual data entry and continuous updating..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1rem;">
+          Request My Free AI Workflow Blueprint
+        </button>
+
+        <div style="text-align: center; margin-top: 1rem; font-size: 0.8rem; color: var(--text-dim);">
+          🔒 Zero spam guaranteed. No commitment required.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/ai-workflows.js"></script>
+</body>
+
+</html>

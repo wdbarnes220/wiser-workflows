@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM & Pipeline Automation | Wiser Workflows</title>
+  <meta name="description" content="Accelerate your RevOps from lead capture to cash collection with autonomous individualized follow-ups, pre-drafted SOW contracts, and 1-click e-signatures.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/crm-pipeline.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Header & Navigation
+       ========================================================================= -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="Wiser Workflows Home">
+        <div class="logo-mark">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <span class="logo-text">Wiser<span class="text-gradient">Workflows</span></span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="ai-workflows.html" class="nav-link">AI & Agents</a></li>
+          <li><a href="crm-pipeline.html" class="nav-link active">CRM & Sales</a></li>
+          <li><a href="sitemap.html" class="nav-link">Site Map</a></li>
+          <li><a href="#transparency-scale" class="nav-link">Pricing & ROI</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+          <span>Schedule CRM Audit</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         Hero Section
+         ========================================================================= -->
+    <section class="section hero-section" style="padding-top: 7rem; padding-bottom: 4rem;">
+      <div class="container">
+        <div class="hero-content" style="text-align: center; max-width: 920px; margin: 0 auto;">
+          <div class="crm-hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+            </svg>
+            <span>Autonomous RevOps & Deal Desk Acceleration</span>
+          </div>
+
+          <h1 class="hero-title" style="font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.15; margin-bottom: 1.5rem;">
+            From Inbound Lead to Signed SOW <br>
+            <span class="text-gradient">in Minutes, Not Days</span>
+          </h1>
+
+          <p class="hero-subtitle" style="font-size: 1.15rem; max-width: 780px; margin: 0 auto 2.5rem; color: var(--text-muted);">
+            Eliminate stalled deals, manual follow-ups, and slow proposal drafting. Our autonomous CRM engine triggers individualized buyer cadences, auto-generates custom SOW contracts, and collects e-signatures with zero sales rep delay.
+          </p>
+
+          <div class="hero-actions" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+              <span>Schedule Your CRM Automation Audit</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#queue-simulator" class="btn btn-secondary btn-lg">
+              <span>Explore Follow-Up Simulator</span>
+            </a>
+          </div>
+
+          <!-- Key Metrics Bar -->
+          <div class="metrics-strip">
+            <div class="metric-card">
+              <div class="metric-val">&lt; 90s</div>
+              <div class="metric-label">Lead Response Time</div>
+              <div class="metric-sub">vs 42 hours industry avg</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-val">+42%</div>
+              <div class="metric-label">SOW Close Rate</div>
+              <div class="metric-sub">Zero proposal delay</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-val">100%</div>
+              <div class="metric-label">Deal Term Compliance</div>
+              <div class="metric-sub">Auto-verified pricing & scope</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-val">0 Hrs</div>
+              <div class="metric-label">Manual Contract Drafting</div>
+              <div class="metric-sub">Instant SOW & MSA generation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 1: Individualized Follow-up Queue Simulator
+         ========================================================================= -->
+    <section class="section" id="queue-simulator" style="background: #faf8f5;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+          <div class="section-tag">Interactive Simulation</div>
+          <h2 class="section-title">Queued Individualized <span class="text-gradient">Follow-Up Engine</span></h2>
+          <p>
+            Generic email blasts get ignored. See how our CRM automation listens for lead enrichment signals, matches buyer tone, and executes a personalized multi-touch cadence across Day 0, Day 2, and Day 4.
+          </p>
+        </div>
+
+        <!-- Simulator Workspace -->
+        <div class="queue-simulator-card">
+          <!-- Control Bar -->
+          <div class="queue-control-bar">
+            <!-- Persona Selector -->
+            <div class="control-pill-group">
+              <span class="control-pill-label">Buyer Persona:</span>
+              <button class="persona-pill active" data-persona="saas-founder">
+                <span>💻 SaaS Founder (Sarah)</span>
+              </button>
+              <button class="persona-pill" data-persona="construction-ops">
+                <span>🏗️ Commercial GC Ops (David)</span>
+              </button>
+              <button class="persona-pill" data-persona="logistics-vp">
+                <span>📦 Freight Director (Elena)</span>
+              </button>
+            </div>
+
+            <!-- Tone Selector -->
+            <div class="control-pill-group">
+              <span class="control-pill-label">Tone Match:</span>
+              <button class="tone-pill active" data-tone="consultative">
+                <span>🤝 Consultative</span>
+              </button>
+              <button class="tone-pill" data-tone="executive">
+                <span>⚡ Executive Direct</span>
+              </button>
+              <button class="tone-pill" data-tone="technical">
+                <span>🛠️ Technical Deep-Dive</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Dual Workspace Grid -->
+          <div class="queue-workspace-grid">
+            <!-- Left Pane: Lead Intel & Cadence Stepper -->
+            <div class="queue-left-pane">
+              <!-- Lead Intel Card -->
+              <div class="lead-intel-box">
+                <div class="lead-intel-header">
+                  <span class="lead-name" id="queue-lead-name">Sarah Jenkins — CEO & Co-Founder</span>
+                  <span class="lead-score-badge" id="queue-lead-score">98/100 (Hot Inbound)</span>
+                </div>
+                <div class="lead-intel-details" id="queue-lead-details">
+                  <div>Company: <strong>CloudScale Analytics</strong></div>
+                  <div>Scale: <strong>65 FTE</strong></div>
+                  <div>Volume: <strong>$8.5M ARR</strong></div>
+                  <div>Current CRM: <strong>HubSpot Enterprise</strong></div>
+                </div>
+              </div>
+
+              <!-- Cadence Steps Stepper -->
+              <div>
+                <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">
+                  Automated Multi-Touch Cadence:
+                </div>
+                <div class="cadence-stepper">
+                  <div class="cadence-step-btn active" data-day="0">
+                    <div class="cadence-step-icon">01</div>
+                    <div class="cadence-step-meta">
+                      <div class="cadence-step-timing">Day 0 • T + 45s (Instant)</div>
+                      <div class="cadence-step-title">Context-Rich Intake & Welcome</div>
+                      <div class="cadence-step-desc">Personalized to scale & tech stack with zero delay.</div>
+                    </div>
+                  </div>
+
+                  <div class="cadence-step-btn" data-day="2">
+                    <div class="cadence-step-icon">02</div>
+                    <div class="cadence-step-meta">
+                      <div class="cadence-step-timing">Day 2 • T + 48 Hours</div>
+                      <div class="cadence-step-title">Custom ROI & Savings Projection</div>
+                      <div class="cadence-step-desc">Quantitative analysis based on lead inputs.</div>
+                    </div>
+                  </div>
+
+                  <div class="cadence-step-btn" data-day="4">
+                    <div class="cadence-step-icon">03</div>
+                    <div class="cadence-step-meta">
+                      <div class="cadence-step-timing">Day 4 • T + 96 Hours</div>
+                      <div class="cadence-step-title">Pre-Drafted SOW Closing Nudge</div>
+                      <div class="cadence-step-desc">Eliminates buying friction with ready-to-sign SOW.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Pane: Live Rendered Outreach Email -->
+            <div class="queue-right-pane">
+              <div class="email-preview-container">
+                <div class="email-preview-header">
+                  <div class="email-header-row">
+                    <span>To:</span>
+                    <strong id="queue-email-recipient">Sarah Jenkins &lt;sarah.jenkins@cloudscaleanalytics.com&gt;</strong>
+                  </div>
+                  <div class="email-header-row">
+                    <span>Subject:</span>
+                    <strong id="queue-email-subject">Quick question regarding CloudScale’s enterprise deal velocity</strong>
+                  </div>
+                </div>
+
+                <div class="email-preview-body" id="queue-email-body">
+                  <!-- Dynamically populated by JS -->
+                </div>
+
+                <div class="email-preview-footer">
+                  <div class="email-status-tag">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Autonomous Queue Ready • Tokens Verified</span>
+                  </div>
+                  <span id="queue-email-timing" style="font-family: var(--font-mono); font-size: 0.75rem;">Day 0 • T + 45s</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 2: Pre-Drafted SOW Contracts & Instant E-Signature Studio
+         ========================================================================= -->
+    <section class="section" id="sow-studio">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+          <div class="section-tag">Deal Desk Automation</div>
+          <h2 class="section-title">Pre-Drafted Contracts with <span class="text-gradient">Instant E-Signature</span></h2>
+          <p>
+            Never make a prospect wait 5 days for legal to draft an agreement. Our Deal Desk pipeline converts CRM opportunity terms into compliant Statements of Work (SOW) ready for 1-click digital execution.
+          </p>
+        </div>
+
+        <div class="sow-studio-container">
+          <!-- Left: Deal Terms Controller -->
+          <div class="deal-terms-card">
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.25rem;">
+              CRM Deal Terms Controller
+            </h3>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+              Adjust deal parameters to see how the SOW and milestone payments recalculate dynamically.
+            </p>
+
+            <div class="terms-control-group">
+              <!-- Deal Size Slider -->
+              <div class="term-item">
+                <div class="term-label-row">
+                  <span>Project Deal Size:</span>
+                  <span class="term-val-badge" id="deal-size-val">$38,500</span>
+                </div>
+                <input type="range" class="term-slider" id="deal-size-slider" min="15000" max="120000" step="2500" value="38500">
+              </div>
+
+              <!-- Delivery Timeline Slider -->
+              <div class="term-item">
+                <div class="term-label-row">
+                  <span>Target Delivery Timeline:</span>
+                  <span class="term-val-badge" id="timeline-val">3 Weeks</span>
+                </div>
+                <input type="range" class="term-slider" id="timeline-slider" min="2" max="8" step="1" value="3">
+              </div>
+
+              <!-- Scope Selection Chips -->
+              <div class="term-item">
+                <div class="term-label-row">
+                  <span>Included Scope Modules:</span>
+                </div>
+                <div class="scope-chips-grid">
+                  <button class="scope-chip-btn active">✓ Ingestion Webhooks</button>
+                  <button class="scope-chip-btn active">✓ HubSpot CRM Sync</button>
+                  <button class="scope-chip-btn active">✓ E-Sign Integration</button>
+                  <button class="scope-chip-btn active">✓ Stripe / ERP Billing</button>
+                </div>
+              </div>
+
+              <!-- API Engine Indicator -->
+              <div style="background: rgba(44, 76, 59, 0.06); border: 1px solid rgba(44, 76, 59, 0.2); padding: 0.85rem 1rem; border-radius: var(--radius-md); font-size: 0.78rem; color: var(--accent-indigo);">
+                <strong>⚡ Legal Engine:</strong> DocuSign & PandaDoc REST APIs • AES-256 Signature Encryption • SOC2 Audit Trail
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Rendered SOW Paper Document -->
+          <div class="contract-paper-frame">
+            <div class="contract-watermark" id="contract-watermark-tag">Ready for E-Signature</div>
+
+            <div class="contract-header">
+              <div class="contract-title">STATEMENT OF WORK (SOW-2026-WW-89)</div>
+              <div class="contract-subtitle">Turnkey CRM & RevOps Pipeline Automation Master Schedule</div>
+            </div>
+
+            <!-- Contract Parties -->
+            <div class="contract-parties-grid">
+              <div>
+                <strong style="color: #0f172a;">SERVICE PROVIDER:</strong><br>
+                Wiser Workflows LLC<br>
+                Austin, Texas • contact@wiserworkflows.com
+              </div>
+              <div>
+                <strong style="color: #0f172a;">CLIENT ENTITY:</strong><br>
+                <span id="sow-client-name">CloudScale Analytics Inc.</span><br>
+                Target Delivery: <strong id="sow-timeline-text">3 Weeks from Kickoff</strong>
+              </div>
+            </div>
+
+            <!-- Scope Clauses -->
+            <div class="contract-clause">
+              <div class="clause-heading">1. Scope of Automation Services</div>
+              <p>
+                Provider shall engineer and deploy autonomous bi-directional lead ingestion, individualized cadence routing, pre-drafted contract generation, and automated cash-collection webhooks into Client's CRM.
+              </p>
+            </div>
+
+            <!-- Milestones Table -->
+            <div class="contract-clause">
+              <div class="clause-heading">2. Guaranteed Investment & Milestone Schedule</div>
+              <table class="milestones-table">
+                <thead>
+                  <tr>
+                    <th>Milestone Stage</th>
+                    <th>Deliverable Output</th>
+                    <th style="text-align: right;">Amount (USD)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>M1: Kickoff & Schema Design</strong></td>
+                    <td>Webhook Architecture & Field Mapping</td>
+                    <td style="text-align: right;" id="sow-milestone-deposit">$19,250 (50%)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>M2: Production Rollout & QA</strong></td>
+                    <td>E-Sign Integration, ERP Sync & Testing</td>
+                    <td style="text-align: right;" id="sow-milestone-delivery">$19,250 (50%)</td>
+                  </tr>
+                  <tr style="background: #faf8f5; font-weight: 800;">
+                    <td colspan="2">TOTAL FIXED-FEE INVESTMENT:</td>
+                    <td style="text-align: right; color: var(--accent-cyan);" id="sow-contract-total">$38,500</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- E-Signature Action Area -->
+            <div class="esign-action-block">
+              <div class="esign-trigger-row">
+                <div class="sign-badge-pill">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                  <span>SHA-256 Audit Trail • Legally Binding</span>
+                </div>
+                <button class="btn btn-primary" id="sign-contract-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 20h9"></path>
+                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                  </svg>
+                  <span>Execute 1-Click E-Signature</span>
+                </button>
+              </div>
+
+              <!-- Downstream Trigger Flow Box (Appears after signing) -->
+              <div class="downstream-flow-card" id="downstream-flow-card">
+                <div style="font-weight: 700; color: #34d399; font-size: 0.85rem;">
+                  ⚡ Downstream RevOps Webhook Cascade Triggered:
+                </div>
+                <div class="flow-step-list">
+                  <div class="flow-step-item">
+                    <span class="step-status-icon">○</span>
+                    <span>1. CRM Deal Stage updated to <strong style="color: #ffffff;">"Closed-Won"</strong> in 180ms</span>
+                  </div>
+                  <div class="flow-step-item">
+                    <span class="step-status-icon">○</span>
+                    <span>2. Slack <strong style="color: #ffffff;">#revops-wins</strong> notification fired with deal terms</span>
+                  </div>
+                  <div class="flow-step-item">
+                    <span class="step-status-icon">○</span>
+                    <span>3. Stripe 50% deposit invoice auto-dispatched to client accounting</span>
+                  </div>
+                  <div class="flow-step-item">
+                    <span class="step-status-icon">○</span>
+                    <span>4. ClickUp / Asana onboarding project generated from template</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 3: Interactive 3-Stage Cost Transparency Scale
+         ========================================================================= -->
+    <section class="section" id="transparency-scale" style="background: #faf8f5;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+          <div class="section-tag">Transparent Pricing & ROI</div>
+          <h2 class="section-title">Interactive Cost <span class="text-gradient">Transparency Scale</span></h2>
+          <p>
+            No hidden fees or vague estimates. Toggle between high-level executive summaries, milestone deliverables, and granular line-item costs to see exactly how your investment creates ROI.
+          </p>
+        </div>
+
+        <div class="transparency-container">
+          <!-- 3-Stage Segmented Control -->
+          <div class="stage-segmented-control">
+            <button class="stage-tab-btn active" data-stage="executive">
+              <span>1. Executive Summary</span>
+            </button>
+            <button class="stage-tab-btn" data-stage="milestone">
+              <span>2. Milestone Breakdown</span>
+            </button>
+            <button class="stage-tab-btn" data-stage="itemized">
+              <span>3. Itemized Granular Costing</span>
+            </button>
+          </div>
+
+          <!-- View 1: Executive Summary -->
+          <div id="transparency-exec-view">
+            <div class="exec-transparency-grid">
+              <div class="exec-card">
+                <div class="exec-card-val" style="color: var(--accent-cyan);" id="cost-exec-total">$38,500</div>
+                <div class="exec-card-label">Total Fixed Investment</div>
+              </div>
+              <div class="exec-card">
+                <div class="exec-card-val" style="color: #059669;" id="cost-exec-roi">$163,625/yr</div>
+                <div class="exec-card-label">Projected Annual Savings</div>
+              </div>
+              <div class="exec-card">
+                <div class="exec-card-val" id="cost-exec-payback">2.8 Months</div>
+                <div class="exec-card-label">Full Payback Period</div>
+              </div>
+              <div class="exec-card">
+                <div class="exec-card-val" style="color: var(--accent-indigo);" id="cost-exec-hours">1,444 Hrs/yr</div>
+                <div class="exec-card-label">Sales Rep Time Reclaimed</div>
+              </div>
+            </div>
+            <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); max-width: 680px; margin: 0 auto;">
+              Backed by our <strong>100% On-Time Delivery Guarantee</strong>. If we miss our agreed production rollout date, we refund 20% of the contract fee immediately.
+            </p>
+          </div>
+
+          <!-- View 2: Milestone-Based Breakdown -->
+          <div id="transparency-milestone-view" style="display: none;">
+            <div class="milestone-stages-grid">
+              <div class="milestone-stage-card">
+                <div class="stage-number-tag">1</div>
+                <div style="font-weight: 700; color: var(--text-main); font-size: 0.95rem;">Discovery & Architecture</div>
+                <div class="stage-cost-val" id="cost-m1-val">$7,700</div>
+                <ul class="stage-items-list">
+                  <li>Lead schema & field mapping</li>
+                  <li>CRM audit & webhook listeners</li>
+                  <li>Security boundary definition</li>
+                </ul>
+              </div>
+
+              <div class="milestone-stage-card">
+                <div class="stage-number-tag">2</div>
+                <div style="font-weight: 700; color: var(--text-main); font-size: 0.95rem;">Core Pipeline Build</div>
+                <div class="stage-cost-val" id="cost-m2-val">$17,325</div>
+                <ul class="stage-items-list">
+                  <li>Multi-touch cadence logic</li>
+                  <li>AI personalization prompt tuning</li>
+                  <li>DocuSign / PandaDoc SOW API</li>
+                </ul>
+              </div>
+
+              <div class="milestone-stage-card">
+                <div class="stage-number-tag">3</div>
+                <div style="font-weight: 700; color: var(--text-main); font-size: 0.95rem;">QA & Security Audit</div>
+                <div class="stage-cost-val" id="cost-m3-val">$7,700</div>
+                <ul class="stage-items-list">
+                  <li>Edge-case webhook retry testing</li>
+                  <li>Stripe / ERP invoice verification</li>
+                  <li>SOC2 data access policy check</li>
+                </ul>
+              </div>
+
+              <div class="milestone-stage-card">
+                <div class="stage-number-tag">4</div>
+                <div style="font-weight: 700; color: var(--text-main); font-size: 0.95rem;">Rollout & Training</div>
+                <div class="stage-cost-val" id="cost-m4-val">$5,775</div>
+                <ul class="stage-items-list">
+                  <li>Production launch & monitoring</li>
+                  <li>Sales team video SOPs</li>
+                  <li>30-day post-launch support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- View 3: Granular Itemized Costing -->
+          <div id="transparency-itemized-view" style="display: none;">
+            <div class="itemized-table-wrap">
+              <table class="itemized-cost-table">
+                <thead>
+                  <tr>
+                    <th>Line Item / Resource Component</th>
+                    <th>Rate / Allocation Spec</th>
+                    <th>Hours / Quota</th>
+                    <th style="text-align: right;">Subtotal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Principal Automation Architect</strong></td>
+                    <td>Lead RevOps & Schema Architecture</td>
+                    <td>42 Hours @ $195/hr</td>
+                    <td class="cost-num">$8,190</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Senior Integration Engineer</strong></td>
+                    <td>API Webhooks, DocuSign & Stripe Engineering</td>
+                    <td>94 Hours @ $165/hr</td>
+                    <td class="cost-num">$15,510</td>
+                  </tr>
+                  <tr>
+                    <td><strong>AI Systems & Prompt Engineer</strong></td>
+                    <td>Persona & Tone Matching Prompt Calibration</td>
+                    <td>38 Hours @ $175/hr</td>
+                    <td class="cost-num">$6,650</td>
+                  </tr>
+                  <tr>
+                    <td><strong>QA Automation & Security Specialist</strong></td>
+                    <td>Chaos Webhook Testing & SOC2 Boundary Audit</td>
+                    <td>32 Hours @ $155/hr</td>
+                    <td class="cost-num">$4,960</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Deployment Materials & Infrastructure</strong></td>
+                    <td>Cloud Serverless, Redis Queue & API Tokens</td>
+                    <td>Turnkey Setup Package</td>
+                    <td class="cost-num">$3,190</td>
+                  </tr>
+                  <tr class="itemized-total-row">
+                    <td colspan="3">TOTAL FIXED ITEMIZED INVESTMENT:</td>
+                    <td class="cost-num" style="color: var(--accent-cyan);" id="cost-itemized-total">$38,500</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 4: Enterprise CRM & RevOps Integration Ecosystem
+         ========================================================================= -->
+    <section class="section" id="integrations">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+          <div class="section-tag">Supported Tech Stack</div>
+          <h2 class="section-title">Seamless Two-Way <span class="text-gradient">CRM Integrations</span></h2>
+          <p>
+            We don't replace your favorite tools—we supercharge them with reliable event-driven webhooks and sub-second bi-directional sync.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🟧</div>
+            <div style="font-weight: 700; color: var(--text-main);">HubSpot CRM</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Deal stages & contacts</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">☁️</div>
+            <div style="font-weight: 700; color: var(--text-main);">Salesforce</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Enterprise CPQ & Flow</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">✍️</div>
+            <div style="font-weight: 700; color: var(--text-main);">DocuSign API</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Automated e-signatures</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🐼</div>
+            <div style="font-weight: 700; color: var(--text-main);">PandaDoc</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">SOW & proposal generation</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">💳</div>
+            <div style="font-weight: 700; color: var(--text-main);">Stripe & QuickBooks</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Deposit & billing sync</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">💬</div>
+            <div style="font-weight: 700; color: var(--text-main);">Slack & Teams</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Deal victory alerts</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 5: Final Call-to-Action
+         ========================================================================= -->
+    <section class="section cta-section" style="background: linear-gradient(135deg, #151916, #1c2b22); color: #ffffff; padding: 5rem 0;">
+      <div class="container" style="text-align: center; max-width: 800px;">
+        <div class="section-tag" style="background: rgba(226, 114, 91, 0.2); color: #f97316; border-color: rgba(226, 114, 91, 0.4);">
+          Free 15-Minute Audit
+        </div>
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin: 1.25rem 0; font-family: var(--font-heading);">
+          Ready to Accelerate Your <br>
+          <span style="color: #e2725b;">Lead-to-Cash Pipeline?</span>
+        </h2>
+        <p style="font-size: 1.05rem; color: #cbd5e1; margin-bottom: 2.5rem; line-height: 1.7;">
+          Book a 15-minute CRM Automation Audit. We'll identify your pipeline bottlenecks and deliver an exact SOW blueprint and ROI model tailored to your tech stack.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            <span>Schedule Your CRM Automation Audit</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <a href="index.html" class="logo">
+          <div class="logo-mark">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <span class="logo-text">Wiser<span class="text-gradient">Workflows</span></span>
+        </a>
+        <p class="footer-desc">
+          Building bespoke automation systems, autonomous AI agent pipelines, and high-velocity RevOps engines for ambitious companies.
+        </p>
+        <div class="footer-socials">
+          <span class="social-badge">⚡ Austin, TX • Global Delivery</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Solutions</h4>
+        <ul class="footer-links">
+          <li><a href="ai-workflows.html">AI & Multimodal OCR</a></li>
+          <li><a href="crm-pipeline.html">CRM & Sales Pipelines</a></li>
+          <li><a href="api-sync.html">Cross-Platform API Sync</a></li>
+          <li><a href="data-dashboards.html">Data Pipelines & BI</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Architecture</h4>
+        <ul class="footer-links">
+          <li><a href="sitemap.html">Interactive Site Map</a></li>
+          <li><a href="index.html#calculator">ROI Calculator</a></li>
+          <li><a href="index.html#process">4-Step Methodology</a></li>
+          <li><a href="#transparency-scale">Cost Transparency Scale</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Start a Project</h4>
+        <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem;">
+          Get your customized pipeline blueprint within 24 hours.
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%;">
+          <span>Book Free 15-Min Audit</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; 2026 Wiser Workflows LLC. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security Guardrails</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/crm-pipeline.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

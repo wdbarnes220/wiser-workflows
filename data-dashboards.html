@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Pipelines & BI Dashboards | Wiser Workflows</title>
+  <meta name="description" content="Consolidate marketing ad spend, sales velocity, customer support, and financial accounting into a single source of truth with automated ELT pipelines and predictive forecasting.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/data-dashboards.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Header & Navigation
+       ========================================================================= -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="Wiser Workflows Home">
+        <div class="logo-mark">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <span class="logo-text">Wiser<span class="text-gradient">Workflows</span></span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="ai-workflows.html" class="nav-link">AI & Agents</a></li>
+          <li><a href="crm-pipeline.html" class="nav-link">CRM & Sales</a></li>
+          <li><a href="api-sync.html" class="nav-link">API Sync</a></li>
+          <li><a href="data-dashboards.html" class="nav-link active">BI & Analytics</a></li>
+          <li><a href="sitemap.html" class="nav-link">Site Map</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+          <span>Get Analytics Blueprint</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         Hero Section
+         ========================================================================= -->
+    <section class="section hero-section" style="padding-top: 7rem; padding-bottom: 4rem;">
+      <div class="container">
+        <div class="hero-content" style="text-align: center; max-width: 920px; margin: 0 auto;">
+          <div class="bi-hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+            <span>Automated Data Warehousing & Predictive Modeling</span>
+          </div>
+
+          <h1 class="hero-title" style="font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.15; margin-bottom: 1.5rem;">
+            Turn Siloed Operational Metrics into <br>
+            <span class="text-gradient">Predictive Growth Intelligence</span>
+          </h1>
+
+          <p class="hero-subtitle" style="font-size: 1.15rem; max-width: 780px; margin: 0 auto 2.5rem; color: var(--text-muted);">
+            Stop manual CSV spreadsheet exporting. Consolidate marketing ad spend, sales velocity, customer support, and financial accounting into a single source of truth with automated ELT pipelines and predictive forecasting.
+          </p>
+
+          <div class="hero-actions" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+              <span>Get Your Custom Analytics Blueprint</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#growth-monitor" class="btn btn-secondary btn-lg">
+              <span>Explore Live Growth Monitor</span>
+            </a>
+          </div>
+
+          <!-- Key Metrics Bar -->
+          <div class="bi-metrics-strip">
+            <div class="bi-metric-card">
+              <div class="bi-metric-val">&lt; 15 Min</div>
+              <div class="bi-metric-label">Warehouse Freshness</div>
+              <div class="bi-metric-sub">Automated ELT micro-batches</div>
+            </div>
+            <div class="bi-metric-card">
+              <div class="bi-metric-val">100%</div>
+              <div class="bi-metric-label">Centralized Source of Truth</div>
+              <div class="bi-metric-sub">Zero manual CSV sheets</div>
+            </div>
+            <div class="bi-metric-card">
+              <div class="bi-metric-val">+34%</div>
+              <div class="bi-metric-label">Forecast Accuracy</div>
+              <div class="bi-metric-sub">dbt modeling & attribution</div>
+            </div>
+            <div class="bi-metric-card">
+              <div class="bi-metric-val">0 Hrs</div>
+              <div class="bi-metric-label">Weekly Reporting Time</div>
+              <div class="bi-metric-sub">Autonomous Slack summaries</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 1: Multi-Source Data Consolidation Engine
+         ========================================================================= -->
+    <section class="section" id="data-consolidation" style="background: #faf8f5;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+          <div class="section-tag">Unified Data Lake Architecture</div>
+          <h2 class="section-title">Multi-Source Data <span class="text-gradient">Consolidation Engine</span></h2>
+          <p>
+            Raw API feeds from isolated marketing, sales, support, and financial platforms are automatically ingested, normalized, and transformed into clean analytical data marts in Snowflake, BigQuery, or Postgres.
+          </p>
+        </div>
+
+        <div class="consolidation-container">
+          <!-- Top Stream Selector Bar -->
+          <div class="consolidation-control-bar">
+            <div class="source-pills-group">
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Select Data Stream:</span>
+              <button class="source-pill-btn active" data-stream="marketing-ads">
+                <span>📣 Marketing Ad Spend</span>
+              </button>
+              <button class="source-pill-btn" data-stream="sales-velocity">
+                <span>💼 Sales Pipeline Velocity</span>
+              </button>
+              <button class="source-pill-btn" data-stream="support-health">
+                <span>🎧 Support & CS Health</span>
+              </button>
+              <button class="source-pill-btn" data-stream="financials-gl">
+                <span>💳 General Ledger & P&L</span>
+              </button>
+            </div>
+
+            <div style="font-size: 0.78rem; font-family: var(--font-mono); color: #9333ea; font-weight: 700;">
+              <span>Target: Snowflake / BigQuery Marts</span>
+            </div>
+          </div>
+
+          <!-- Dual Ingestion vs dbt Schema Grid -->
+          <div class="consolidation-grid">
+            <!-- Left Pane: Source Stream Details -->
+            <div class="consolidation-left-pane">
+              <div class="source-stream-card">
+                <div class="stream-card-header">
+                  <span class="stream-title" id="stream-card-title">📣 <span>Marketing & Multi-Channel Ad Spend</span></span>
+                  <span class="stream-cadence-badge" id="stream-cadence-tag">15-Min Micro-Batch</span>
+                </div>
+
+                <div class="stream-metrics-grid">
+                  <div>
+                    <span style="color: var(--text-muted);" id="stream-m1-label">Monthly Ad Spend</span><br>
+                    <strong id="stream-m1-val">$42,500.00</strong>
+                  </div>
+                  <div>
+                    <span style="color: var(--text-muted);" id="stream-m2-label">Blended CAC</span><br>
+                    <strong id="stream-m2-val">$340.00</strong>
+                  </div>
+                  <div>
+                    <span style="color: var(--text-muted);" id="stream-m3-label">Attributed ROAS</span><br>
+                    <strong style="color: #059669;" id="stream-m3-val">4.8x Target</strong>
+                  </div>
+                  <div>
+                    <span style="color: var(--text-muted);" id="stream-m4-label">Source Channels</span><br>
+                    <strong id="stream-m4-val">Google, Meta, LinkedIn</strong>
+                  </div>
+                </div>
+
+                <div style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; margin-top: 0.25rem;">
+                  <strong>Ingestion Protocol:</strong> Automated daily batch extraction via REST APIs, mapped into immutable S3/GCS parquet lake, and processed by dbt transformation models.
+                </div>
+              </div>
+
+              <div style="background: rgba(147, 51, 234, 0.08); border: 1px solid rgba(147, 51, 234, 0.25); padding: 1rem; border-radius: var(--radius-md); font-size: 0.78rem; color: #7e22ce;">
+                <strong>⚡ Data Hygiene Rule:</strong> Duplicate transactions, cross-channel attribution overlaps, and currency conversions are normalized before entering warehouse marts.
+              </div>
+            </div>
+
+            <!-- Right Pane: dbt SQL Transformation Preview -->
+            <div class="consolidation-right-pane">
+              <div class="warehouse-model-header">
+                <div class="warehouse-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                  <span id="dbt-file-name">models/staging/stg_marketing_ad_performance.sql</span>
+                </div>
+                <span style="font-size: 0.72rem; color: #34d399; font-family: var(--font-mono);">✓ COMPILED SQL</span>
+              </div>
+
+              <pre class="code-schema-block" id="dbt-sql-code">
+-- dbt Transformation Model: Normalized Marketing Ad Performance
+{{ config(materialized='incremental', unique_key='ad_campaign_id') }}
+
+SELECT
+    campaign_id AS ad_campaign_id,
+    channel_source,
+    DATE_TRUNC(timestamp_utc, DAY) AS reporting_date,
+    SUM(spend_usd) AS total_ad_spend,
+    SUM(impressions) AS total_impressions,
+    SUM(clicks) AS total_clicks,
+    SAFE_DIVIDE(SUM(spend_usd), SUM(conversions)) AS blended_cac_usd,
+    SAFE_DIVIDE(SUM(attributed_revenue_usd), SUM(spend_usd)) AS roas_multiple
+FROM {{ source('raw_marketing_lake', 'campaign_telemetry') }}
+GROUP BY 1, 2, 3;
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 2: Interactive Weekly Growth & Trend Velocity Monitor
+         ========================================================================= -->
+    <section class="section" id="growth-monitor">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+          <div class="section-tag">Executive BI Telemetry</div>
+          <h2 class="section-title">Weekly Growth & <span class="text-gradient">Trend Velocity Monitor</span></h2>
+          <p>
+            Real-time executive visibility without digging through 10 different dashboards. Filter across 7-day, 30-day, and quarterly intervals to track revenue momentum and unit economics.
+          </p>
+        </div>
+
+        <div class="growth-monitor-card">
+          <!-- Timeframe Selector -->
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div class="timeframe-segmented-control">
+              <button class="timeframe-btn active" data-tf="7d">Last 7 Days</button>
+              <button class="timeframe-btn" data-tf="30d">Last 30 Days</button>
+              <button class="timeframe-btn" data-tf="qtd">Quarter-to-Date (QTD)</button>
+            </div>
+
+            <div style="font-size: 0.78rem; font-family: var(--font-mono); color: #059669; font-weight: 700; display: inline-flex; align-items: center; gap: 0.4rem;">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: #10b981;"></span>
+              <span>Live Executive Stream • Refreshed 4m ago</span>
+            </div>
+          </div>
+
+          <!-- 4 Executive KPI Cards -->
+          <div class="kpi-cards-grid">
+            <!-- KPI 1 -->
+            <div class="kpi-card">
+              <div class="kpi-label-row">
+                <span class="kpi-label">Revenue Velocity</span>
+                <span class="kpi-trend-pill positive" id="kpi-revenue-growth">+18.4% WoW</span>
+              </div>
+              <div class="kpi-value" style="color: #9333ea;" id="kpi-revenue-val">+$38,400</div>
+              <div class="kpi-subtext">Net new ARR added</div>
+            </div>
+
+            <!-- KPI 2 -->
+            <div class="kpi-card">
+              <div class="kpi-label-row">
+                <span class="kpi-label">LTV-to-CAC Ratio</span>
+                <span class="kpi-trend-pill positive">Healthy</span>
+              </div>
+              <div class="kpi-value" style="color: #059669;" id="kpi-cac-val">4.8x</div>
+              <div class="kpi-subtext" id="kpi-cac-sub">Target &gt; 3.0x</div>
+            </div>
+
+            <!-- KPI 3 -->
+            <div class="kpi-card">
+              <div class="kpi-label-row">
+                <span class="kpi-label">Sales Cycle Velocity</span>
+                <span class="kpi-trend-pill positive">Faster</span>
+              </div>
+              <div class="kpi-value" style="color: var(--text-main);" id="kpi-days-val">8.2 Days</div>
+              <div class="kpi-subtext" id="kpi-days-sub">-3.4 days vs baseline</div>
+            </div>
+
+            <!-- KPI 4 -->
+            <div class="kpi-card">
+              <div class="kpi-label-row">
+                <span class="kpi-label">Ops Hours Reclaimed</span>
+                <span class="kpi-trend-pill positive">Automated</span>
+              </div>
+              <div class="kpi-value" style="color: var(--accent-cyan);" id="kpi-hours-val">46.5 Hrs</div>
+              <div class="kpi-subtext" id="kpi-hours-sub">Saved across 12 reps</div>
+            </div>
+          </div>
+
+          <!-- Trend Velocity Visualizer Chart -->
+          <div class="trend-visualizer-box">
+            <div class="chart-header-row">
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.95rem;">Weekly Revenue Trajectory vs Model Target</strong><br>
+                <span style="font-size: 0.78rem; color: var(--text-muted);">Solid Purple: Actual Normalized ARR • Dashed Teal: Algorithmic Target</span>
+              </div>
+              <div class="chart-legend">
+                <div class="legend-item">
+                  <span class="legend-dot" style="background: #9333ea;"></span>
+                  <span>Actual Pipeline Revenue</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot" style="background: var(--accent-cyan);"></span>
+                  <span>Growth Target</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SVG Multi-Series Sparkline -->
+            <div class="sparkline-svg-container">
+              <svg viewBox="0 0 640 180" width="100%" height="180" preserveAspectRatio="none" style="overflow: visible;">
+                <!-- Grid Lines -->
+                <line x1="0" y1="30" x2="640" y2="30" stroke="#f1f5f9" stroke-width="1" />
+                <line x1="0" y1="80" x2="640" y2="80" stroke="#f1f5f9" stroke-width="1" />
+                <line x1="0" y1="130" x2="640" y2="130" stroke="#f1f5f9" stroke-width="1" />
+
+                <!-- Projected Path (Dashed Teal) -->
+                <path id="sparkline-projected" d="M 0 130 Q 80 120, 160 100 T 320 80 T 480 55 T 640 40" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-dasharray="6,4" />
+
+                <!-- Actual Revenue Path (Solid Purple) -->
+                <path id="sparkline-actual" d="M 0 120 Q 80 110, 160 85 T 320 60 T 480 35 T 640 20" fill="none" stroke="#9333ea" stroke-width="3.5" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 3: Future Opportunity & Scenario Forecaster
+         ========================================================================= -->
+    <section class="section" id="forecaster" style="background: #faf8f5;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+          <div class="section-tag">Predictive Modeling Engine</div>
+          <h2 class="section-title">Future Opportunity & <span class="text-gradient">Scenario Forecaster</span></h2>
+          <p>
+            Test real-world growth hypotheses before deploying capital. Adjust your inbound lead growth, automation gains, and win rates to simulate forward-looking ARR impact and capacity.
+          </p>
+        </div>
+
+        <div class="forecaster-container">
+          <!-- Left: Assumption Sliders -->
+          <div class="forecaster-controls-card">
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.25rem;">
+              Growth & Efficiency Assumptions
+            </h3>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Move sliders to see real-time mathematical impact across revenue and headcount requirements.
+            </p>
+
+            <!-- Slider 1: Lead Growth -->
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span>Inbound Lead Volume Increase:</span>
+                <span class="slider-val-badge" id="forecast-lead-val">+25%</span>
+              </div>
+              <input type="range" class="term-slider" id="forecast-lead-slider" min="0" max="100" step="5" value="25">
+            </div>
+
+            <!-- Slider 2: Efficiency Gain -->
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span>Operational Automation Efficiency:</span>
+                <span class="slider-val-badge" id="forecast-eff-val">+20%</span>
+              </div>
+              <input type="range" class="term-slider" id="forecast-eff-slider" min="0" max="50" step="5" value="20">
+            </div>
+
+            <!-- Slider 3: Win Rate -->
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span>Proposal-to-Close Win Rate:</span>
+                <span class="slider-val-badge" id="forecast-win-val">28%</span>
+              </div>
+              <input type="range" class="term-slider" id="forecast-win-slider" min="10" max="50" step="2" value="28">
+            </div>
+          </div>
+
+          <!-- Right: Forecasted Output Card -->
+          <div class="forecast-output-card">
+            <!-- Hero Stat: Projected ARR Delta -->
+            <div class="forecast-hero-stat">
+              <div class="forecast-arr-val" id="forecast-arr-val">+$480,000</div>
+              <div class="forecast-arr-label">Projected 12-Month Net ARR Impact</div>
+            </div>
+
+            <!-- 4 Detail Metric Boxes -->
+            <div class="forecast-details-grid">
+              <div class="forecast-detail-box">
+                <span class="detail-box-label">Team Capacity Scale</span>
+                <span class="detail-box-val" style="color: #059669;" id="forecast-capacity-val">1.8x Scale (0 Hires)</span>
+              </div>
+              <div class="forecast-detail-box">
+                <span class="detail-box-label">Annual Hours Reclaimed</span>
+                <span class="detail-box-val" style="color: var(--accent-indigo);" id="forecast-hours-val">1,680 Hrs/yr</span>
+              </div>
+              <div class="forecast-detail-box">
+                <span class="detail-box-label">Working Capital Acceleration</span>
+                <span class="detail-box-val" style="color: #9333ea;" id="forecast-capital-val">+$134,400</span>
+              </div>
+              <div class="forecast-detail-box">
+                <span class="detail-box-label">Reporting Friction</span>
+                <span class="detail-box-val" style="color: #059669;">Zero Manual CSVs</span>
+              </div>
+            </div>
+
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
+              * Modeled on $1.2M baseline ARR, 20% baseline proposal win rate, and standardized RevOps automation benchmarks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 4: Enterprise BI & Warehouse Ecosystem
+         ========================================================================= -->
+    <section class="section" id="warehouse-stack">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+          <div class="section-tag">Modern Data Stack</div>
+          <h2 class="section-title">Engineered on <span class="text-gradient">Battle-Tested Infrastructure</span></h2>
+          <p>
+            We implement production-grade modern data stacks that your engineering and finance teams can rely on.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">❄️</div>
+            <div style="font-weight: 700; color: var(--text-main);">Snowflake</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Cloud Data Warehouse</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📊</div>
+            <div style="font-weight: 700; color: var(--text-main);">Google BigQuery</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Serverless Analytics</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🟧</div>
+            <div style="font-weight: 700; color: var(--text-main);">dbt (Data Build Tool)</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Modular SQL Modeling</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔄</div>
+            <div style="font-weight: 700; color: var(--text-main);">Fivetran & Airbyte</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Automated ELT Extractors</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📈</div>
+            <div style="font-weight: 700; color: var(--text-main);">Metabase & Looker</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Executive Dashboards</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🐘</div>
+            <div style="font-weight: 700; color: var(--text-main);">PostgreSQL</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Operational Data Marts</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 5: Final Call-to-Action
+         ========================================================================= -->
+    <section class="section cta-section" style="background: linear-gradient(135deg, #151916, #1c2b22); color: #ffffff; padding: 5rem 0;">
+      <div class="container" style="text-align: center; max-width: 800px;">
+        <div class="section-tag" style="background: rgba(147, 51, 234, 0.2); color: #c084fc; border-color: rgba(147, 51, 234, 0.4);">
+          Free 15-Minute Blueprint
+        </div>
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin: 1.25rem 0; font-family: var(--font-heading);">
+          Ready to Build Your Centralized <br>
+          <span style="color: #c084fc;">Business Intelligence Warehouse?</span>
+        </h2>
+        <p style="font-size: 1.05rem; color: #cbd5e1; margin-bottom: 2.5rem; line-height: 1.7;">
+          Schedule an Analytics Blueprint call. We'll audit your current data sprawl and provide an exact architecture plan for automated ELT pipelines and real-time executive dashboards.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            <span>Get Your Custom Analytics Blueprint</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <a href="index.html" class="logo">
+          <div class="logo-mark">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <span class="logo-text">Wiser<span class="text-gradient">Workflows</span></span>
+        </a>
+        <p class="footer-desc">
+          Building bespoke automation systems, autonomous AI agent pipelines, and high-velocity RevOps engines for ambitious companies.
+        </p>
+        <div class="footer-socials">
+          <span class="social-badge">⚡ Austin, TX • Global Delivery</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Solutions</h4>
+        <ul class="footer-links">
+          <li><a href="ai-workflows.html">AI & Multimodal OCR</a></li>
+          <li><a href="crm-pipeline.html">CRM & Sales Pipelines</a></li>
+          <li><a href="api-sync.html">Cross-Platform API Sync</a></li>
+          <li><a href="data-dashboards.html" style="color: #9333ea; font-weight: 600;">Data Pipelines & BI</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Architecture</h4>
+        <ul class="footer-links">
+          <li><a href="sitemap.html">Interactive Site Map</a></li>
+          <li><a href="#data-consolidation">Data Consolidation</a></li>
+          <li><a href="#growth-monitor">Growth Velocity Monitor</a></li>
+          <li><a href="#forecaster">Scenario Forecaster</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Start a Project</h4>
+        <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem;">
+          Get your customized analytics blueprint within 24 hours.
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%;">
+          <span>Book Free 15-Min Audit</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; 2026 Wiser Workflows LLC. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security Guardrails</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data-dashboards.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

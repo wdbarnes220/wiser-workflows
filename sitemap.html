@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture Blueprint & Site Map | Wiser Workflows</title>
+  <meta name="description" content="Explore the full visual site map and system architecture for Wiser Workflows. Interactive node map covering core solutions, industry blueprints, and tools.">
+  <meta name="keywords" content="Wiser Workflows site map, workflow architecture, AI automation directory, business process map">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sitemap.css">
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <!-- Site Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" id="brand-home-link">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+          </svg>
+        </div>
+        <span>Wiser<span>Workflows</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="primary-nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#services" class="nav-link">Solutions</a></li>
+          <li><a href="index.html#calculator" class="nav-link">ROI Calculator</a></li>
+          <li><a href="sitemap.html" class="nav-link active">Site Map Blueprint</a></li>
+          <li><a href="index.html#process" class="nav-link">Methodology</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="header-audit-cta">
+          <span>Book Free Audit</span>
+        </a>
+        <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--header-height) + 3rem); min-height: 80vh;">
+    <div class="container">
+      <!-- Breadcrumb & Header -->
+      <div style="margin-bottom: 2.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem;">
+          <a href="index.html" style="color: var(--accent-cyan);">Home</a>
+          <span>/</span>
+          <span>System Architecture & Site Map</span>
+        </div>
+        
+        <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem;">
+          Site Map & <span class="text-gradient">Architecture Blueprint</span>
+        </h1>
+        <p style="max-width: 760px; font-size: 1.1rem;">
+          The structural blueprint for Wiser Workflows. Explore our page hierarchy, functional conversion goals, underlying tech stacks, and planned expansion roadmap.
+        </p>
+      </div>
+
+      <!-- Architecture Summary Stats -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin-bottom: 3rem;">
+        <div class="glass-card" style="padding: 1.25rem;">
+          <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 600;">Total Documented Pages</div>
+          <div style="font-size: 1.85rem; font-weight: 800; color: #fff; margin-top: 0.25rem;">12 Pages</div>
+        </div>
+        <div class="glass-card" style="padding: 1.25rem;">
+          <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 600;">Status: Live in V1</div>
+          <div style="font-size: 1.85rem; font-weight: 800; color: var(--accent-emerald); margin-top: 0.25rem;">8 Ready</div>
+        </div>
+        <div class="glass-card" style="padding: 1.25rem;">
+          <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 600;">Status: Planned / Roadmap</div>
+          <div style="font-size: 1.85rem; font-weight: 800; color: var(--accent-cyan); margin-top: 0.25rem;">4 Modules</div>
+        </div>
+        <div class="glass-card" style="padding: 1.25rem;">
+          <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; font-weight: 600;">Primary Target Persona</div>
+          <div style="font-size: 1.45rem; font-weight: 800; color: #a5b4fc; margin-top: 0.25rem;">Founders & Ops</div>
+        </div>
+      </div>
+
+      <!-- Interactive Sitemap Tool & View Area -->
+      <div class="sitemap-toolbar">
+        <div class="sitemap-filters">
+          <button class="filter-btn active" data-category="all">All Pages</button>
+          <button class="filter-btn" data-category="core">Core</button>
+          <button class="filter-btn" data-category="solutions">Solutions</button>
+          <button class="filter-btn" data-category="industries">Industries</button>
+          <button class="filter-btn" data-category="resources">Tools & ROI</button>
+          <button class="filter-btn" data-category="company">Company</button>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <div style="position: relative; width: 240px;">
+            <input type="text" id="sitemap-search-input" placeholder="Search pages, routes, tech..." class="form-input" style="padding: 0.45rem 0.85rem; font-size: 0.85rem;">
+          </div>
+
+          <div class="view-switcher">
+            <button class="view-btn active" data-view="tree">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+              <span>Tree View</span>
+            </button>
+            <button class="view-btn" data-view="grid">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+              <span>Directory</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Render Area -->
+      <div id="sitemap-render-area" style="margin-bottom: 5rem;"></div>
+
+      <!-- Technical Architecture Legend -->
+      <div class="glass-card" style="margin-bottom: 5rem; padding: 2.25rem;">
+        <h3 style="color: #fff; margin-bottom: 1.25rem; font-size: 1.35rem;">Architecture Legend & System Hierarchy</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+          <div style="display: flex; gap: 0.75rem;">
+            <span class="badge badge-live" style="height: fit-content;">Live V1</span>
+            <div style="font-size: 0.9rem; color: var(--text-muted);">
+              Fully active and deployed in the current website build. Includes lead capture and dynamic widgets.
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.75rem;">
+            <span class="badge badge-planned" style="height: fit-content;">Planned</span>
+            <div style="font-size: 0.9rem; color: var(--text-muted);">
+              Under active engineering design. Blueprint and functional specifications defined.
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.75rem;">
+            <span class="badge badge-expansion" style="height: fit-content;">Expansion</span>
+            <div style="font-size: 0.9rem; color: var(--text-muted);">
+              Client-only portals, authenticated dashboards, and private client monitoring endpoints.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+              </svg>
+            </div>
+            <span>Wiser<span>Workflows</span></span>
+          </a>
+          <p>Autonomous AI workflows and systems architecture consulting.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Solutions</a></li>
+            <li><a href="index.html#calculator">ROI Calculator</a></li>
+            <li><a href="sitemap.html">Site Map Blueprint</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Methodology</h5>
+          <ul class="footer-links">
+            <li><a href="index.html#process">4-Step Delivery</a></li>
+            <li><a href="index.html#proof">Client Case Studies</a></li>
+            <li><a href="index.html#hero">Live Simulator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Free Consultation</h5>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width: 100%;">
+            Book 15-Min Audit
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Wiser Workflows. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="index.html" style="color: var(--text-dim);">Home</a>
+          <a href="sitemap.html" style="color: var(--text-dim);">Architecture</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Audit Modal -->
+  <div class="modal-backdrop" id="audit-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div style="margin-bottom: 1.75rem;">
+        <span class="badge badge-live" style="margin-bottom: 0.5rem;">Free 15-Minute Consultation</span>
+        <h3 id="modal-title" style="color: #fff; font-size: 1.65rem; margin-top: 0.35rem;">Claim Your Workflow Audit</h3>
+        <p style="font-size: 0.95rem;">Tell us about your team's biggest bottlenecks and we'll prepare a custom automation blueprint.</p>
+      </div>
+
+      <form id="audit-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="audit-name">Full Name *</label>
+            <input type="text" id="audit-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="audit-email">Work Email *</label>
+            <input type="email" id="audit-email" class="form-input" placeholder="alex@company.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="audit-company">Company / Team Size</label>
+            <select id="audit-company" class="form-select">
+              <option value="1-10">1 - 10 employees</option>
+              <option value="11-50" selected>11 - 50 employees</option>
+              <option value="51-200">51 - 200 employees</option>
+              <option value="200+">200+ employees</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="audit-service-interest">Primary Focus Area</label>
+            <select id="audit-service-interest" class="form-select">
+              <option value="ai-agents">Custom AI Agents & Document Intelligence</option>
+              <option value="crm-sales">CRM & Sales Pipeline Automation</option>
+              <option value="api-sync">Cross-App Data & Financial Sync</option>
+              <option value="full-audit">Comprehensive Operational Audit</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="audit-bottleneck">What repetitive process wastes the most team time right now?</label>
+          <textarea id="audit-bottleneck" class="form-textarea" rows="3" placeholder="e.g. Copy-pasting data between our CRM and ERP, manually creating client agreements..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1rem;">
+          Request My Free Workflow Blueprint
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/sitemap-data.js"></script>
+  <script src="js/sitemap-viewer.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

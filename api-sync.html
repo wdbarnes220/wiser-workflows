@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cross-Platform API Sync & System Integrations | Wiser Workflows</title>
+  <meta name="description" content="Connect Stripe, QuickBooks, Grist, and your CRM into a real-time two-way synchronization mesh with automated self-healing and human-in-the-loop exception handling.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/api-sync.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Header & Navigation
+       ========================================================================= -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="Wiser Workflows Home">
+        <div class="logo-mark">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <span class="logo-text">Wiser<span class="text-gradient">Workflows</span></span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="ai-workflows.html" class="nav-link">AI & Agents</a></li>
+          <li><a href="crm-pipeline.html" class="nav-link">CRM & Sales</a></li>
+          <li><a href="api-sync.html" class="nav-link active">API Sync</a></li>
+          <li><a href="sitemap.html" class="nav-link">Site Map</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+          <span>Request Sync Blueprint</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         Hero Section
+         ========================================================================= -->
+    <section class="section hero-section" style="padding-top: 7rem; padding-bottom: 4rem;">
+      <div class="container">
+        <div class="hero-content" style="text-align: center; max-width: 920px; margin: 0 auto;">
+          <div class="sync-hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+            </svg>
+            <span>Real-Time Bi-Directional Synchronization</span>
+          </div>
+
+          <h1 class="hero-title" style="font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.15; margin-bottom: 1.5rem;">
+            Real-Time Two-Way Sync Across <br>
+            <span class="text-gradient">Your Entire Software Stack</span>
+          </h1>
+
+          <p class="hero-subtitle" style="font-size: 1.15rem; max-width: 780px; margin: 0 auto 2.5rem; color: var(--text-muted);">
+            Eliminate double-entry, duplicate records, and reconciliation nightmares. Connect Stripe, QuickBooks, Grist, and your CRM into a unified, self-healing data mesh with sub-second latency and zero data loss.
+          </p>
+
+          <div class="hero-actions" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+              <span>Request Your System Integration Blueprint</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#consistency-mesh" class="btn btn-secondary btn-lg">
+              <span>Explore Consistency Mesh</span>
+            </a>
+          </div>
+
+          <!-- Key Metrics Bar -->
+          <div class="sync-metrics-strip">
+            <div class="sync-metric-card">
+              <div class="sync-metric-val">&lt; 320ms</div>
+              <div class="sync-metric-label">Cross-App Sync Latency</div>
+              <div class="sync-metric-sub">Real-time webhook mesh</div>
+            </div>
+            <div class="sync-metric-card">
+              <div class="sync-metric-val">100%</div>
+              <div class="sync-metric-label">Ledger Checksum Match</div>
+              <div class="sync-metric-sub">Cryptographic verification</div>
+            </div>
+            <div class="sync-metric-card">
+              <div class="sync-metric-val">0</div>
+              <div class="sync-metric-label">Duplicate Records</div>
+              <div class="sync-metric-sub">Automated deduplication</div>
+            </div>
+            <div class="sync-metric-card">
+              <div class="sync-metric-val">99.999%</div>
+              <div class="sync-metric-label">Event Delivery SLA</div>
+              <div class="sync-metric-sub">Zero-loss Dead-Letter Queue</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 1: Multi-Interface Consistency Mesh (Interactive Simulator)
+         ========================================================================= -->
+    <section class="section" id="consistency-mesh" style="background: #faf8f5;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+          <div class="section-tag">Zero-Drift Architecture</div>
+          <h2 class="section-title">Multi-Interface <span class="text-gradient">Consistency Mesh</span></h2>
+          <p>
+            When data updates in one tool, it must immediately agree across all other interfaces. Click any event below to watch live bi-directional propagation across Stripe, QuickBooks, Grist, and HubSpot.
+          </p>
+        </div>
+
+        <div class="mesh-simulator-container">
+          <!-- Top Mutation Control Bar -->
+          <div class="mesh-control-bar">
+            <div class="trigger-pills-group">
+              <span class="trigger-label">Simulate Event:</span>
+              <button class="trigger-btn active" data-scenario="payment">
+                <span>💳 $12.5k Stripe Payment</span>
+              </button>
+              <button class="trigger-btn" data-scenario="upgrade">
+                <span>📈 CRM Plan Upgrade</span>
+              </button>
+              <button class="trigger-btn" data-scenario="refund">
+                <span>↺ Gateway Refund / Dispute</span>
+              </button>
+            </div>
+
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: #059669; font-weight: 700;">
+              <span class="sync-dot"></span>
+              <span>4-Way Event Mesh Active</span>
+            </div>
+          </div>
+
+          <!-- 4-Node Live Mesh Grid -->
+          <div class="mesh-nodes-grid">
+            <!-- Node 1: Stripe -->
+            <div class="mesh-node-card" id="node-stripe">
+              <div class="node-header">
+                <div class="node-brand">
+                  <span>💳</span>
+                  <span>Stripe</span>
+                </div>
+                <span class="node-role-badge">Payment Gateway</span>
+              </div>
+
+              <div class="node-state-box">
+                <div class="node-state-row">
+                  <span>Net Balance</span>
+                  <strong>$154,200.00</strong>
+                </div>
+                <div class="node-state-row">
+                  <span>Payment Intent</span>
+                  <strong>pi_3N8201a9</strong>
+                </div>
+                <div class="node-state-row">
+                  <span>Event Status</span>
+                  <strong>100% Succeeded</strong>
+                </div>
+              </div>
+
+              <div class="node-sync-status">
+                <span class="sync-dot"></span>
+                <span>Webhook Dispatched (200 OK)</span>
+              </div>
+            </div>
+
+            <!-- Node 2: QuickBooks / Xero -->
+            <div class="mesh-node-card" id="node-quickbooks">
+              <div class="node-header">
+                <div class="node-brand">
+                  <span>📗</span>
+                  <span>QuickBooks</span>
+                </div>
+                <span class="node-role-badge">General Ledger</span>
+              </div>
+
+              <div class="node-state-box">
+                <div class="node-state-row">
+                  <span>Invoice Ref</span>
+                  <strong>INV-2026-9082</strong>
+                </div>
+                <div class="node-state-row">
+                  <span>GL Account 1010</span>
+                  <strong>$12,500.00</strong>
+                </div>
+                <div class="node-state-row">
+                  <span>Bank Match</span>
+                  <strong>Reconciled</strong>
+                </div>
+              </div>
+
+              <div class="node-sync-status">
+                <span class="sync-dot"></span>
+                <span>Ledger Matched (0 Variance)</span>
+              </div>
+            </div>
+
+            <!-- Node 3: Grist / Airtable Database -->
+            <div class="mesh-node-card" id="node-grist">
+              <div class="node-header">
+                <div class="node-brand">
+                  <span>📊</span>
+                  <span>Grist / Airtable</span>
+                </div>
+                <span class="node-role-badge">Operations DB</span>
+              </div>
+
+              <div class="node-state-box">
+                <div class="node-state-row">
+                  <span>Record ID</span>
+                  <strong>ORD-8812-US</strong>
+                </div>
+                <div class="node-state-row">
+                  <span>Order State</span>
+                  <strong>FULFILLMENT_READY</strong>
+                </div>
+                <div class="node-state-row">
+                  <span>Table Index</span>
+                  <strong>Row #4,821</strong>
+                </div>
+              </div>
+
+              <div class="node-sync-status">
+                <span class="sync-dot"></span>
+                <span>Row Lock Released</span>
+              </div>
+            </div>
+
+            <!-- Node 4: HubSpot / Salesforce CRM -->
+            <div class="mesh-node-card" id="node-hubspot">
+              <div class="node-header">
+                <div class="node-brand">
+                  <span>🟧</span>
+                  <span>HubSpot CRM</span>
+                </div>
+                <span class="node-role-badge">Revenue Ops</span>
+              </div>
+
+              <div class="node-state-box">
+                <div class="node-state-row">
+                  <span>Deal Stage</span>
+                  <strong>Closed-Won</strong>
+                </div>
+                <div class="node-state-row">
+                  <span>Deal Amount</span>
+                  <strong>$12,500 ARR</strong>
+                </div>
+                <div class="node-state-row">
+                  <span>Lifecycle Stage</span>
+                  <strong>Customer</strong>
+                </div>
+              </div>
+
+              <div class="node-sync-status">
+                <span class="sync-dot"></span>
+                <span>Deal Property Updated</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Telemetry -->
+          <div class="mesh-telemetry-footer">
+            <div>Sync Latency: <strong style="color: #ffffff;" id="mesh-latency-metric">284ms</strong></div>
+            <div>Payload Integrity: <strong style="color: #34d399;" id="mesh-checksum-metric">sha256:7f8a9102c983</strong></div>
+            <div>Deduplication: <strong style="color: #38bdf8;">0 Collisions</strong></div>
+            <div>Protocol: <strong style="color: #cbd5e1;">gRPC / Webhook Stream</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 2: Self-Auditing & Self-Healing Engine (Pipeline)
+         ========================================================================= -->
+    <section class="section" id="self-healing">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+          <div class="section-tag">Resilient Data Pipelines</div>
+          <h2 class="section-title">Self-Auditing & <span class="text-gradient">Self-Healing Engine</span></h2>
+          <p>
+            APIs fail, rate limits hit, and third-party servers drop offline. Our self-healing engine detects transient failures, applies exponential backoff jitter, and quarantines anomalies with zero data loss.
+          </p>
+        </div>
+
+        <div class="self-healing-container">
+          <!-- Left: 4-Stage Stepper -->
+          <div class="healing-stepper-card">
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.25rem;">
+              Autonomous Healing Protocols
+            </h3>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1rem;">
+              4 layers of automated fault tolerance executed on every transaction event.
+            </p>
+
+            <div class="healing-step-card resolved">
+              <div class="step-num-badge">1</div>
+              <div class="step-body">
+                <div class="step-title-row">
+                  <span class="step-title">SHA-256 Checksum Audit</span>
+                  <span class="step-status-badge">Integrity Guard</span>
+                </div>
+                <div class="step-desc">
+                  Validates cryptographic payload hashes before ingestion to prevent bit-rot and payload corruption.
+                </div>
+              </div>
+            </div>
+
+            <div class="healing-step-card resolved">
+              <div class="step-num-badge">2</div>
+              <div class="step-body">
+                <div class="step-title-row">
+                  <span class="step-title">Schema Normalization & Dedup</span>
+                  <span class="step-status-badge">Universal Contract</span>
+                </div>
+                <div class="step-desc">
+                  Transforms messy vendor JSON into strict Pydantic/Zod schemas, automatically dropping duplicate events.
+                </div>
+              </div>
+            </div>
+
+            <div class="healing-step-card">
+              <div class="step-num-badge">3</div>
+              <div class="step-body">
+                <div class="step-title-row">
+                  <span class="step-title">Exponential Backoff & Jitter</span>
+                  <span class="step-status-badge">Rate-Limit Evasion</span>
+                </div>
+                <div class="step-desc">
+                  Automatically backs off upon HTTP 429/503 spikes ($t \times 2^n$ + jitter) to protect target APIs.
+                </div>
+              </div>
+            </div>
+
+            <div class="healing-step-card">
+              <div class="step-num-badge">4</div>
+              <div class="step-body">
+                <div class="step-title-row">
+                  <span class="step-title">Dead-Letter-Queue (DLQ) Quarantine</span>
+                  <span class="step-status-badge">Zero-Loss Fail-Safe</span>
+                </div>
+                <div class="step-desc">
+                  Non-retryable payloads are quarantined in an immutable Redis/S3 DLQ for inspection.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Live Event Stream Console & Action Bar -->
+          <div class="healing-console-card">
+            <div class="console-header">
+              <div class="console-title">
+                <span class="sync-dot" style="background: #38bdf8; box-shadow: 0 0 8px #38bdf8;"></span>
+                <span>Live Healing Pipeline Console</span>
+              </div>
+              <span style="font-size: 0.72rem; color: #64748b; font-family: var(--font-mono);">BUFFER: OK</span>
+            </div>
+
+            <div class="console-log-feed" id="healing-console-logs">
+              <div class="log-entry">[00:00.00] System ready. Ready to simulate network rate limits and transient outages.</div>
+            </div>
+
+            <div class="console-action-bar">
+              <span style="font-size: 0.75rem; color: #94a3b8; font-family: var(--font-mono);">SLA: 99.999% Guaranteed</span>
+              <button class="btn btn-primary btn-sm" id="run-healing-sim-btn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>Simulate 429 Failure & Auto-Heal</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 3: Human-in-the-Loop (HITL) Auto-Prompting System
+         ========================================================================= -->
+    <section class="section" id="hitl-alerts" style="background: #faf8f5;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+          <div class="section-tag">Exception Management</div>
+          <h2 class="section-title">Human-in-the-Loop <span class="text-gradient">Auto-Prompting System</span></h2>
+          <p>
+            When financial discrepancies or tax variances exceed preset thresholds, the system immediately pauses staging and dispatches an interactive notification with 1-click executive resolution.
+          </p>
+        </div>
+
+        <div class="hitl-alert-container">
+          <!-- Left: Anomaly Threshold Configuration -->
+          <div class="threshold-config-card">
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.25rem;">
+              Variance Confidence Thresholds
+            </h3>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+              Set the tolerance boundaries for financial reconciliation and automated schema mapping.
+            </p>
+
+            <div class="threshold-items-list">
+              <div class="threshold-item">
+                <div class="threshold-header">
+                  <span>Currency Surcharge Variance:</span>
+                  <span class="threshold-val" id="variance-threshold-val">$250.00</span>
+                </div>
+                <input type="range" class="term-slider" id="variance-threshold-slider" min="50" max="1000" step="50" value="250">
+              </div>
+
+              <div class="threshold-item">
+                <div class="threshold-header">
+                  <span>Tax Jurisdiction Mismatch:</span>
+                  <span class="threshold-val" style="color: #f59e0b;">AUTO-FLAG &gt; $0.01</span>
+                </div>
+              </div>
+
+              <div class="threshold-item">
+                <div class="threshold-header">
+                  <span>Unmapped Line-Item SKU:</span>
+                  <span class="threshold-val" style="color: #38bdf8;">QUARANTINE DLQ</span>
+                </div>
+              </div>
+
+              <div style="background: rgba(226, 114, 91, 0.08); border: 1px solid rgba(226, 114, 91, 0.25); padding: 0.85rem; border-radius: var(--radius-md); font-size: 0.78rem; color: #c2410c;">
+                <strong>🛡️ Guardrail Rule:</strong> Discrepancies above threshold halt downstream ledger posting until authorized by an authorized executive.
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Slack Alert Card -->
+          <div class="slack-alert-card">
+            <div class="slack-header">
+              <span>💬</span>
+              <span>Slack Notification:</span>
+              <span class="slack-channel-name">#revops-finance-alerts</span>
+            </div>
+
+            <div class="slack-body">
+              <div class="slack-bot-intro">
+                <div class="slack-bot-avatar">🤖</div>
+                <div>
+                  <span class="slack-bot-name">Wiser Sync Guard</span>
+                  <span class="slack-time">Today at 2:45 PM • Automated Exception</span>
+                </div>
+              </div>
+
+              <div class="slack-message-bubble">
+                <strong style="color: #f59e0b;">⚠️ Financial Discrepancy Detected (Above $250 Threshold)</strong><br>
+                Payment collected via Stripe exceeds QuickBooks Purchase Order terms due to unmapped currency conversion surcharge.
+
+                <table class="discrepancy-diff-table">
+                  <tr>
+                    <td>Stripe Payment Intent:</td>
+                    <td style="color: #34d399; font-weight: 700;">$14,850.00 USD</td>
+                  </tr>
+                  <tr>
+                    <td>QuickBooks PO #8812:</td>
+                    <td style="color: #94a3b8;">$14,350.00 USD</td>
+                  </tr>
+                  <tr style="background: rgba(245, 158, 11, 0.2);">
+                    <td>Calculated Variance:</td>
+                    <td style="color: #fbbf24; font-weight: 700;">+$500.00 FX Surcharge</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div id="slack-resolution-status">
+                <div style="font-size: 0.78rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; margin-bottom: 0.4rem;">
+                  1-Click Executive Action Required:
+                </div>
+                <div class="slack-actions-row">
+                  <button class="slack-action-btn reconcile" id="hitl-action-reconcile">
+                    ✓ Accept & Reconcile to GL
+                  </button>
+                  <button class="slack-action-btn rollback" id="hitl-action-rollback">
+                    ↺ Rollback & Quarantine
+                  </button>
+                  <button class="slack-action-btn edit" id="hitl-action-split">
+                    ✏️ Auto-Split to FX Account
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 4: Enterprise Connector Ecosystem
+         ========================================================================= -->
+    <section class="section" id="connectors">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+          <div class="section-tag">Supported Integrations</div>
+          <h2 class="section-title">Pre-Built Connectors for <span class="text-gradient">Every Critical System</span></h2>
+          <p>
+            Whether using REST APIs, webhooks, GraphQL, or legacy SFTP pipelines, we ensure zero-drift data synchronization across your infrastructure.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">💳</div>
+            <div style="font-weight: 700; color: var(--text-main);">Stripe Billing</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Subscriptions & deposits</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📗</div>
+            <div style="font-weight: 700; color: var(--text-main);">QuickBooks Online</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">GL & bank feeds</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📊</div>
+            <div style="font-weight: 700; color: var(--text-main);">Grist & Airtable</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Relational ops data</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">☁️</div>
+            <div style="font-weight: 700; color: var(--text-main);">NetSuite ERP</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Enterprise financials</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🟧</div>
+            <div style="font-weight: 700; color: var(--text-main);">HubSpot & Salesforce</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Bi-directional deals</div>
+          </div>
+          <div class="glass-card" style="padding: 1.5rem;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+            <div style="font-weight: 700; color: var(--text-main);">AWS EventBridge</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Serverless event mesh</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Section 5: Final Call-to-Action
+         ========================================================================= -->
+    <section class="section cta-section" style="background: linear-gradient(135deg, #151916, #1c2b22); color: #ffffff; padding: 5rem 0;">
+      <div class="container" style="text-align: center; max-width: 800px;">
+        <div class="section-tag" style="background: rgba(226, 114, 91, 0.2); color: #f97316; border-color: rgba(226, 114, 91, 0.4);">
+          Free 15-Minute Blueprint
+        </div>
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin: 1.25rem 0; font-family: var(--font-heading);">
+          Ready to Eliminate Data Silos & <br>
+          <span style="color: #e2725b;">Build Your Zero-Drift Sync?</span>
+        </h2>
+        <p style="font-size: 1.05rem; color: #cbd5e1; margin-bottom: 2.5rem; line-height: 1.7;">
+          Book a 15-minute integration audit. We'll inspect your current API webhooks and deliver an architectural blueprint for sub-second, self-healing bi-directional sync.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            <span>Request Your System Integration Blueprint</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <a href="index.html" class="logo">
+          <div class="logo-mark">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <span class="logo-text">Wiser<span class="text-gradient">Workflows</span></span>
+        </a>
+        <p class="footer-desc">
+          Building bespoke automation systems, autonomous AI agent pipelines, and high-velocity RevOps engines for ambitious companies.
+        </p>
+        <div class="footer-socials">
+          <span class="social-badge">⚡ Austin, TX • Global Delivery</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Solutions</h4>
+        <ul class="footer-links">
+          <li><a href="ai-workflows.html">AI & Multimodal OCR</a></li>
+          <li><a href="crm-pipeline.html">CRM & Sales Pipelines</a></li>
+          <li><a href="api-sync.html" style="color: var(--accent-indigo); font-weight: 600;">Cross-Platform API Sync</a></li>
+          <li><a href="data-dashboards.html">Data Pipelines & BI</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Architecture</h4>
+        <ul class="footer-links">
+          <li><a href="sitemap.html">Interactive Site Map</a></li>
+          <li><a href="#consistency-mesh">Consistency Mesh</a></li>
+          <li><a href="#self-healing">Self-Healing Protocols</a></li>
+          <li><a href="#hitl-alerts">HITL Exception Alerts</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Start a Project</h4>
+        <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem;">
+          Get your customized sync blueprint within 24 hours.
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%;">
+          <span>Book Free 15-Min Audit</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; 2026 Wiser Workflows LLC. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security Guardrails</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/api-sync.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

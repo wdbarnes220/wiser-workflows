@@ -1,0 +1,626 @@
+/**
+ * WISER WORKFLOWS - Cross-Platform API Sync Stylesheet
+ * Custom styles for Consistency Mesh, Self-Healing Pipeline & HITL Slack Alerts
+ */
+
+/* ==========================================================================
+   Hero & Key Metrics Strip
+   ========================================================================== */
+.sync-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(44, 76, 59, 0.1);
+  border: 1px solid rgba(44, 76, 59, 0.3);
+  color: var(--accent-indigo);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.sync-metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 3.5rem;
+}
+
+@media (max-width: 900px) {
+  .sync-metrics-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .sync-metrics-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sync-metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.sync-metric-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-indigo);
+  box-shadow: var(--shadow-lg), 0 0 20px rgba(44, 76, 59, 0.15);
+}
+
+.sync-metric-val {
+  font-size: 2.25rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  background: linear-gradient(135deg, var(--accent-indigo), var(--accent-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.35rem;
+}
+
+.sync-metric-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.sync-metric-sub {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 0.25rem;
+}
+
+/* ==========================================================================
+   Section 1: Multi-Interface Consistency Mesh (Interactive Simulator)
+   ========================================================================== */
+.mesh-simulator-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg), 0 0 35px rgba(44, 76, 59, 0.06);
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.mesh-control-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.trigger-pills-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.trigger-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-right: 0.25rem;
+}
+
+.trigger-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-medium);
+  color: var(--text-main);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.trigger-btn:hover {
+  background: var(--accent-indigo);
+  border-color: var(--accent-indigo);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 76, 59, 0.25);
+}
+
+.trigger-btn.active {
+  background: var(--accent-indigo);
+  border-color: var(--accent-indigo);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(44, 76, 59, 0.3);
+}
+
+/* 4-Node Mesh Grid */
+.mesh-nodes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  padding: 2.25rem;
+  background: #fbf9f5;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .mesh-nodes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .mesh-nodes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mesh-node-card {
+  background: #ffffff;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.mesh-node-card.pulse-updated {
+  border-color: #10b981;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
+  transform: translateY(-3px);
+}
+
+.node-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.75rem;
+}
+
+.node-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.node-role-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-muted);
+}
+
+.node-state-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+}
+
+.node-state-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.node-state-row span {
+  color: var(--text-muted);
+}
+
+.node-state-row strong {
+  color: var(--text-main);
+  font-family: var(--font-mono);
+}
+
+.node-sync-status {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #059669;
+  margin-top: auto;
+}
+
+.sync-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+/* Mesh Telemetry Bar */
+.mesh-telemetry-footer {
+  background: #0f1210;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   Section 2: Self-Auditing & Self-Healing Engine (Pipeline)
+   ========================================================================== */
+.self-healing-container {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  .self-healing-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left: 4-Stage Healing Stepper */
+.healing-stepper-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.healing-step-card {
+  background: #ffffff;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all var(--transition-normal);
+}
+
+.healing-step-card.active {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.04);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.15);
+}
+
+.healing-step-card.resolved {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.04);
+}
+
+.step-num-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: var(--text-muted);
+  font-weight: 800;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.healing-step-card.active .step-num-badge {
+  background: #f59e0b;
+  color: #ffffff;
+}
+
+.healing-step-card.resolved .step-num-badge {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.step-body {
+  flex-grow: 1;
+}
+
+.step-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.step-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.step-status-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-full);
+  background: #f1f5f9;
+  color: var(--text-muted);
+}
+
+.step-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Right: Live Event Stream & Failure Simulation Runner */
+.healing-console-card {
+  background: #0f1210;
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg);
+}
+
+.console-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.console-title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.console-log-feed {
+  flex-grow: 1;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  max-height: 340px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-right: 0.5rem;
+}
+
+.log-entry {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.log-entry.warn { color: #fbbf24; }
+.log-entry.error { color: #f87171; }
+.log-entry.success { color: #34d399; }
+
+.console-action-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.25rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Section 3: Human-in-the-Loop Auto-Prompting System
+   ========================================================================== */
+.hitl-alert-container {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .hitl-alert-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left: Anomaly Threshold Configuration */
+.threshold-config-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.threshold-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.threshold-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.threshold-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.threshold-val {
+  font-family: var(--font-mono);
+  color: var(--accent-indigo);
+}
+
+/* Right: Interactive Slack / Notification Card */
+.slack-alert-card {
+  background: #1e1e24;
+  border: 1px solid #33333e;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  color: #ffffff;
+}
+
+.slack-header {
+  background: #141418;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-bottom: 1px solid #2d2d38;
+}
+
+.slack-channel-name {
+  color: #94a3b8;
+  font-family: var(--font-mono);
+}
+
+.slack-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.slack-bot-intro {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.slack-bot-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.slack-bot-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.slack-time {
+  font-size: 0.72rem;
+  color: #64748b;
+  margin-left: 0.35rem;
+}
+
+.slack-message-bubble {
+  border-left: 4px solid #f59e0b;
+  background: rgba(245, 158, 11, 0.08);
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.discrepancy-diff-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  margin-top: 0.75rem;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.discrepancy-diff-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.slack-actions-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.slack-action-btn {
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.slack-action-btn.reconcile {
+  background: #059669;
+  color: #ffffff;
+}
+
+.slack-action-btn.reconcile:hover {
+  background: #10b981;
+}
+
+.slack-action-btn.rollback {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.slack-action-btn.rollback:hover {
+  background: #ef4444;
+}
+
+.slack-action-btn.edit {
+  background: #334155;
+  color: #ffffff;
+}
+
+.slack-action-btn.edit:hover {
+  background: #475569;
+}

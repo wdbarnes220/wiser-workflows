@@ -1,0 +1,20 @@
+{
+  "name": "wiser-workflows",
+  "version": "1.0.0",
+  "description": "Intelligent AI & Business Automation Solutions - Landing Page & Interactive Site Map Architecture",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y serve . -l 3000",
+    "start": "python3 -m http.server 3000"
+  },
+  "keywords": [
+    "workflow-automation",
+    "ai-agents",
+    "business-automation",
+    "sitemap-explorer",
+    "roi-calculator",
+    "wiser-workflows"
+  ],
+  "author": "Wiser Workflows",
+  "license": "MIT"
+}
