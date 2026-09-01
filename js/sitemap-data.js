@@ -76,7 +76,7 @@ const SITE_MAP_DATA = {
       parentId: "home",
       level: 2,
       title: "Interactive Site Map",
-      route: "/sitemap.html",
+      route: "sitemap.html",
       category: "core",
       status: "live",
       icon: "git-branch",
@@ -86,6 +86,27 @@ const SITE_MAP_DATA = {
       keyComponents: ["Tree Visualizer", "Grid Directory", "Node Search & Filters", "Deep Dive Drawer"],
       techStack: ["Dynamic DOM Rendering", "SVG Tree Connectors"],
       seoKeywords: ["site map", "automation blueprint", "workflow architecture"]
+    },
+    {
+      id: "about-page",
+      parentId: "home",
+      level: 2,
+      title: "About Wesley & Gemini AI",
+      route: "about.html",
+      category: "core",
+      status: "live",
+      icon: "user",
+      description: "Meet Wesley Barnes, systems architect and founder, and explore the multi-year Gemini AI partnership powering high-velocity autonomous business systems.",
+      audience: "Prospects, Executive Founders, Partners, Engineering Leads",
+      conversionGoal: "Schedule 1-on-1 Strategy Call with Wesley",
+      keyComponents: [
+        "Founder Engineering Backstory & Philosophy",
+        "Gemini AI Evolution & Co-Pilot Terminal Simulator",
+        "Human + AI Synergy Matrix (Interactive Inspector)",
+        "Collaborative Milestone Timeline"
+      ],
+      techStack: ["Frontier Gemini Models", "Pydantic Models", "FastAPI Handlers", "Deterministic Workflows"],
+      seoKeywords: ["Wesley Barnes", "Wiser Workflows founder", "Gemini AI workflows", "human AI collaboration", "systems architect"]
     },
     {
       id: "services-ai",

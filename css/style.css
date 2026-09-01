@@ -215,24 +215,26 @@ button, input, select, textarea {
 /* ==========================================================================
    Header & Navigation
    ========================================================================== */
-.site-header {
+.site-header,
+.header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: var(--header-height);
-  z-index: 100;
+  z-index: 1000;
   transition: all var(--transition-normal);
-  background: rgba(250, 249, 246, 0.7);
+  background: rgba(250, 248, 245, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-subtle);
 }
 
-.site-header.scrolled {
-  background: rgba(250, 249, 246, 0.92);
+.site-header.scrolled,
+.header.scrolled {
+  background: rgba(250, 248, 245, 0.95);
   border-bottom-color: var(--border-medium);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .header-container {
@@ -242,7 +244,8 @@ button, input, select, textarea {
   height: 100%;
 }
 
-.brand-logo {
+.brand-logo,
+.logo {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -251,9 +254,11 @@ button, input, select, textarea {
   font-size: 1.35rem;
   letter-spacing: -0.03em;
   color: var(--text-main);
+  text-decoration: none;
 }
 
-.logo-icon {
+.logo-icon,
+.logo-mark {
   width: 38px;
   height: 38px;
   background: var(--gradient-primary);
@@ -264,9 +269,11 @@ button, input, select, textarea {
   box-shadow: 0 0 16px var(--accent-cyan-glow);
   position: relative;
   overflow: hidden;
+  color: #ffffff;
 }
 
-.logo-icon::after {
+.logo-icon::after,
+.logo-mark::after {
   content: '';
   position: absolute;
   inset: 1px;
@@ -275,7 +282,8 @@ button, input, select, textarea {
   z-index: 1;
 }
 
-.logo-icon svg {
+.logo-icon svg,
+.logo-mark svg {
   position: relative;
   z-index: 2;
   color: var(--accent-cyan);
@@ -283,24 +291,29 @@ button, input, select, textarea {
   height: 20px;
 }
 
-.brand-logo span span {
+.brand-logo span span,
+.logo-text span {
   color: var(--accent-cyan);
 }
 
-.nav-menu {
+.nav-menu,
+.nav-list {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 2rem;
+  gap: 1.65rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 0.92rem;
+  font-weight: 600;
   color: var(--text-muted);
   position: relative;
   padding: 0.5rem 0;
   transition: color var(--transition-fast);
+  white-space: nowrap;
 }
 
 .nav-link:hover,
@@ -582,48 +595,161 @@ button, input, select, textarea {
   color: var(--accent-cyan);
 }
 
+.nav-link {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  position: relative;
+  padding: 0.4rem 0;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-main);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-cyan);
+  transition: width var(--transition-normal);
+  border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-badge {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid var(--accent-emerald);
+  color: var(--accent-emerald);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  margin-left: 0.25rem;
+}
+
 /* ==========================================================================
-   Responsive Breakpoints
+   Split-Screen & Responsive Header Layout
    ========================================================================== */
-@media (max-width: 992px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+@media (max-width: 1120px) {
+  .site-header,
+  .header {
+    height: auto !important;
+    padding: 0.65rem 1rem 0.75rem !important;
   }
-  .nav-menu {
-    position: fixed;
-    top: var(--header-height);
-    left: 0;
-    right: 0;
-    background: rgba(250, 249, 246, 0.98);
-    backdrop-filter: blur(20px);
-    flex-direction: column;
-    padding: 2rem 1.5rem;
-    gap: 1.5rem;
-    border-bottom: 1px solid var(--border-medium);
-    transform: translateY(-120%);
-    opacity: 0;
-    pointer-events: none;
-    transition: all var(--transition-normal);
+
+  .header-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.45rem !important;
   }
-  .nav-menu.open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
+
+  /* 1. Quick links on top, parallel with address bar */
+  .nav-desktop,
+  nav[aria-label="Main Navigation"],
+  nav {
+    order: 1 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
   }
-  .menu-toggle {
-    display: block;
+
+  .nav-menu,
+  .nav-list {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.1rem !important;
+    width: 100% !important;
+    position: static !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .nav-link {
+    font-size: 0.85rem !important;
+    white-space: nowrap !important;
+    padding: 0.2rem 0 !important;
+  }
+
+  /* 2. Logo underneath the quick links (where the blue box is) */
+  .brand-logo,
+  .logo {
+    order: 2 !important;
+    margin: 0.25rem auto 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .logo-icon,
+  .logo-mark {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .brand-logo span,
+  .logo-text {
+    font-size: 1.2rem !important;
+  }
+
+  .header-actions {
+    display: none !important;
+  }
+
+  .menu-toggle,
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+
+  /* Ensure hero & main content have clearance below the stacked header */
+  main {
+    padding-top: 8.5rem !important;
+  }
+
+  .hero-section,
+  .page-hero {
+    padding-top: 8.5rem !important;
   }
 }
 
 @media (max-width: 640px) {
+  .nav-menu,
+  .nav-list {
+    gap: 0.75rem !important;
+  }
+
+  .nav-link {
+    font-size: 0.78rem !important;
+  }
+
   .hero-metrics {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+
   .hero-cta-group {
     flex-direction: column;
   }
+
   .hero-cta-group .btn {
     width: 100%;
     justify-content: center;
