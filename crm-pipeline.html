@@ -668,10 +668,11 @@
        Footer
        ========================================================================= -->
   <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-col brand-col">
-        <a href="index.html" class="logo">
-          <div class="logo-mark">
+    <div class="container">
+      <!-- Top Brand Header & Divider -->
+      <div class="footer-top-brand" style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-subtle);">
+        <a href="index.html" class="logo brand-logo" aria-label="Wiser Workflows Home" style="margin-bottom: 0.85rem; display: inline-flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+          <div class="logo-mark logo-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <polyline points="16 18 22 12 16 6"></polyline>
               <polyline points="8 6 2 12 8 18"></polyline>
@@ -679,53 +680,58 @@
           </div>
           <span class="logo-text">Wiser<span class="text-gradient">Workflows</span></span>
         </a>
-        <p class="footer-desc">
+        <p style="font-size: 0.95rem; color: var(--text-muted); max-width: 680px; margin: 0; line-height: 1.6;">
           Building bespoke automation systems, autonomous AI agent pipelines, and high-velocity RevOps engines for ambitious companies.
         </p>
-        <div class="footer-socials">
-          <span class="social-badge">⚡ East Texas • Global Delivery</span>
+      </div>
+
+      <!-- 3-Column Grid -->
+      <div class="footer-columns-grid">
+        <!-- Col 1: Solutions -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="ai-workflows.html">AI & Multimodal OCR</a></li>
+            <li><a href="crm-pipeline.html" style="color: var(--accent-indigo); font-weight: 600;">CRM & Sales Pipelines</a></li>
+            <li><a href="api-sync.html">Cross-Platform API Sync</a></li>
+            <li><a href="data-dashboards.html">Data Pipelines & BI</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: About & Architecture (Yellow Box Position) -->
+        <div class="footer-col">
+          <h4 class="footer-heading">About & Architecture</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Wesley & AI</a></li>
+            <li><a href="sitemap.html">Interactive Site Map</a></li>
+            <li><a href="index.html#calculator">ROI Calculator</a></li>
+            <li><a href="index.html#process">4-Step Methodology</a></li>
+            <li><a href="#transparency-scale">Cost Transparency Scale</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Start a Project (Black Box Position with East Texas badge) -->
+        <div class="footer-col">
+          <h4 class="footer-heading" style="margin-bottom: 0.75rem;">Start a Project</h4>
+          <div style="margin-bottom: 0.85rem;">
+            <span class="social-badge" style="display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 0.25rem 0.65rem; background: rgba(226, 114, 91, 0.1); color: var(--accent-terracotta); border: 1px solid rgba(226, 114, 91, 0.25); border-radius: 9999px;">⚡ East Texas • Global Delivery</span>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem; line-height: 1.5;">
+            Get your customized pipeline blueprint within 24 hours.
+          </p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+            <span>Book Free 15-Min Audit</span>
+          </a>
         </div>
       </div>
 
-      <div class="footer-col">
-        <h4 class="footer-heading">Solutions</h4>
-        <ul class="footer-links">
-          <li><a href="ai-workflows.html">AI & Multimodal OCR</a></li>
-          <li><a href="crm-pipeline.html">CRM & Sales Pipelines</a></li>
-          <li><a href="api-sync.html">Cross-Platform API Sync</a></li>
-          <li><a href="data-dashboards.html">Data Pipelines & BI</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4 class="footer-heading">About & Architecture</h4>
-        <ul class="footer-links">
-          <li><a href="about.html">About Wesley & AI</a></li>
-          <li><a href="sitemap.html">Interactive Site Map</a></li>
-          <li><a href="index.html#calculator">ROI Calculator</a></li>
-          <li><a href="index.html#process">4-Step Methodology</a></li>
-          <li><a href="#transparency-scale">Cost Transparency Scale</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4 class="footer-heading">Start a Project</h4>
-        <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem;">
-          Get your customized pipeline blueprint within 24 hours.
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%;">
-          <span>Book Free 15-Min Audit</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container footer-bottom-container">
-        <p>&copy; 2026 Wiser Workflows LLC. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Security Guardrails</a>
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 Wiser Workflows LLC. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="index.html" style="color: var(--text-dim);">Home</a>
+          <a href="about.html" style="color: var(--text-dim);">About Wesley & AI</a>
+          <a href="sitemap.html" style="color: var(--text-dim);">Architecture</a>
         </div>
       </div>
     </div>
