@@ -1,0 +1,320 @@
+/* ==========================================================================
+   Tech Services & Custom Engineering Stylesheet
+   ========================================================================== */
+
+:root {
+  --accent-tech: #0ea5e9;
+  --accent-tech-glow: rgba(14, 165, 233, 0.25);
+  --accent-tech-subtle: rgba(14, 165, 233, 0.08);
+}
+
+/* Service Pillars Grid */
+.service-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-pillar-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--border-subtle);
+  transition: background var(--transition-fast);
+}
+
+.service-pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-pillar-card.featured::before,
+.service-pillar-card:hover::before {
+  background: var(--gradient-primary);
+}
+
+.pillar-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--accent-tech-subtle);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-tech);
+}
+
+.pillar-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.pillar-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.pillar-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.pillar-specs li {
+  font-size: 0.88rem;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pillar-specs li svg {
+  color: var(--accent-emerald);
+  flex-shrink: 0;
+}
+
+.pillar-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.tech-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(44, 76, 59, 0.08);
+  color: var(--brand-forest);
+  border: 1px solid rgba(44, 76, 59, 0.15);
+}
+
+/* ==========================================================================
+   Interactive Scope & Architecture Configurator
+   ========================================================================== */
+.configurator-wrapper {
+  background: #0f172a;
+  border-radius: var(--radius-xl);
+  border: 1px solid #1e293b;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  color: #f8fafc;
+  overflow: hidden;
+  margin-top: 3.5rem;
+}
+
+.configurator-header {
+  padding: 2rem 2.5rem;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.configurator-header h3 {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.configurator-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  min-height: 520px;
+}
+
+.configurator-controls {
+  padding: 2.5rem;
+  border-right: 1px solid #1e293b;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.control-group-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  margin-bottom: 0.85rem;
+}
+
+/* Platform Selector Pills */
+.platform-selector {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.platform-btn {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.platform-btn:hover {
+  background: #273549;
+  border-color: #475569;
+  color: #ffffff;
+}
+
+.platform-btn.active {
+  background: rgba(14, 165, 233, 0.15);
+  border-color: var(--accent-tech);
+  color: #38bdf8;
+  box-shadow: 0 0 16px rgba(14, 165, 233, 0.2);
+}
+
+/* Feature Checkbox Grid */
+.features-selector {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+}
+
+.feature-checkbox-label {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.feature-checkbox-label:hover {
+  background: #273549;
+}
+
+.feature-checkbox-label input {
+  accent-color: var(--accent-tech);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.feature-checkbox-label.checked {
+  border-color: rgba(56, 189, 248, 0.5);
+  background: rgba(14, 165, 233, 0.08);
+}
+
+/* Configurator Preview Output */
+.configurator-preview {
+  padding: 2.5rem;
+  background: #090d16;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blueprint-meta-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-badge {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: var(--radius-full);
+}
+
+.blueprint-screen {
+  background: #0b1120;
+  border: 1px solid #1e293b;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  flex-grow: 1;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.blueprint-screen .bp-highlight {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.blueprint-screen .bp-green {
+  color: #34d399;
+}
+
+.blueprint-screen .bp-amber {
+  color: #fbbf24;
+}
+
+/* Responsive Configurator */
+@media (max-width: 900px) {
+  .configurator-grid {
+    grid-template-columns: 1fr;
+  }
+  .configurator-controls {
+    border-right: none;
+    border-bottom: 1px solid #1e293b;
+    padding: 1.75rem;
+  }
+  .configurator-preview {
+    padding: 1.75rem;
+  }
+}

@@ -193,6 +193,28 @@ const SITE_MAP_DATA = {
       seoKeywords: ["automated business intelligence", "data pipeline consulting", "executive KPI automation", "predictive ARR forecasting", "dbt data modeling"]
     },
     {
+      id: "services-tech",
+      parentId: "home",
+      level: 2,
+      title: "Custom Apps, Web & Software Services",
+      route: "tech-services.html",
+      category: "solutions",
+      status: "live",
+      icon: "code",
+      description: "Bespoke mobile application development (iOS/Android/PWA), automated backend software programs, modern high-converting web design, and resilient cloud architecture.",
+      audience: "Founders, Operations Leaders, Product Managers, Enterprise Teams",
+      conversionGoal: "Launch Scope Configurator / Book 15-Min Scoping Call",
+      keyComponents: [
+        "Bespoke Tech Stack & Project Scope Configurator",
+        "Mobile App & Progressive Web App (PWA) Development",
+        "Backend Software & Automated Daemon Programs",
+        "Modern Web Design & Interactive UI/UX Systems",
+        "Cloud Infrastructure & Database Architecture"
+      ],
+      techStack: ["React Native", "Flutter", "Python 3.12", "Go", "TypeScript", "FastAPI", "PostgreSQL", "Supabase", "Docker", "AWS/GCP"],
+      seoKeywords: ["custom software development", "mobile app engineering", "web design services", "backend program development", "custom application builder"]
+    },
+    {
       id: "industries-legal",
       parentId: "home",
       level: 3,
