@@ -1,157 +1,112 @@
 /**
- * Tech Services & Custom Engineering Controller
- * Powers the interactive project scope & architecture configurator
+ * Tech Services & Engineering Rate Card Controller (Menu Style)
+ * Handles menu item selections, live total calculator, category filtering, and prefilled inquiry link.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initScopeConfigurator();
+  initServicesMenu();
 });
 
-const PLATFORM_DATA = {
-  web: {
-    name: 'Custom Web Platform / SaaS',
-    baseSprintWeeks: 3,
-    coreTech: ['TypeScript', 'FastAPI / Node.js', 'PostgreSQL', 'Tailwind / Vanilla CSS', 'Redis Cache'],
-    archType: 'Single Page App / SSR + Microservices API'
-  },
-  mobile: {
-    name: 'Cross-Platform Mobile App (iOS & Android)',
-    baseSprintWeeks: 4,
-    coreTech: ['React Native / Flutter', 'FastAPI Backend', 'Supabase / Postgres', 'Offline Sync (SQLite)'],
-    archType: 'Native Binary Build + Push Notification Mesh'
-  },
-  software: {
-    name: 'Backend Program & Automation Daemon',
-    baseSprintWeeks: 2,
-    coreTech: ['Python 3.12 / Go', 'Docker Containers', 'Celery / Redis Queue', 'OpenTelemetry Tracing'],
-    archType: 'Headless Service + Event-Driven Workers'
-  },
-  enterprise: {
-    name: 'Full-Stack Enterprise Digital Suite',
-    baseSprintWeeks: 6,
-    coreTech: ['Full React/Vue Web App', 'iOS/Android App', 'Distributed API Mesh', 'Snowflake / BigQuery DWH'],
-    archType: 'Unified Multi-Interface Ecosystem'
-  }
-};
+let selectedItems = [];
 
-const FEATURE_DATA = {
-  auth: {
-    name: 'Auth & RBAC Matrix',
-    addedDays: 3,
-    techSnippet: 'OAuth2 + JWT Claims + Multi-Tenant Row Level Security'
-  },
-  realtime: {
-    name: 'Real-Time Database Sync & WebSockets',
-    addedDays: 4,
-    techSnippet: 'Postgres CDC (Change-Data-Capture) + WebSocket Bus'
-  },
-  ai: {
-    name: 'AI Agent & LLM Intelligence Pipeline',
-    addedDays: 5,
-    techSnippet: 'Gemini 2.5 Pro Multimodal Pipeline + Qdrant Vector Search'
-  },
-  billing: {
-    name: 'Automated Billing & E-Signature Desk',
-    addedDays: 4,
-    techSnippet: 'Stripe Billing Webhooks + PandaDoc/DocuSign API'
-  },
-  mobile_offline: {
-    name: 'Offline-First Local Storage Engine',
-    addedDays: 4,
-    techSnippet: 'Client-Side SQLite Cache + Bi-directional Replay Sync'
-  }
-};
+function initServicesMenu() {
+  const itemRows = document.querySelectorAll('.menu-item-row');
+  const catButtons = document.querySelectorAll('.menu-cat-btn');
 
-let currentPlatform = 'web';
-let activeFeatures = ['auth', 'realtime', 'ai'];
+  // Row selection handler
+  itemRows.forEach(row => {
+    const checkbox = row.querySelector('.item-checkbox');
+    const id = row.dataset.id;
+    const name = row.dataset.name;
+    const price = parseInt(row.dataset.price, 10) || 0;
+    const turnaround = row.dataset.turnaround || '1 week';
 
-function initScopeConfigurator() {
-  const platformButtons = document.querySelectorAll('.platform-btn');
-  const featureCheckboxes = document.querySelectorAll('.feature-checkbox-input');
-
-  platformButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      platformButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentPlatform = btn.dataset.platform;
-      renderBlueprint();
-    });
-  });
-
-  featureCheckboxes.forEach(cb => {
-    cb.addEventListener('change', (e) => {
-      const label = cb.closest('.feature-checkbox-label');
-      if (cb.checked) {
-        label.classList.add('checked');
-        if (!activeFeatures.includes(cb.value)) activeFeatures.push(cb.value);
-      } else {
-        label.classList.remove('checked');
-        activeFeatures = activeFeatures.filter(f => f !== cb.value);
+    // Click anywhere on row to toggle
+    row.addEventListener('click', (e) => {
+      // Avoid double toggling when directly clicking checkbox
+      if (e.target !== checkbox) {
+        checkbox.checked = !checkbox.checked;
       }
-      renderBlueprint();
+      
+      toggleItemSelection(id, name, price, turnaround, checkbox.checked, row);
+    });
+
+    checkbox.addEventListener('change', () => {
+      toggleItemSelection(id, name, price, turnaround, checkbox.checked, row);
     });
   });
 
-  renderBlueprint();
+  // Category filter tabs
+  catButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      catButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const targetCat = btn.dataset.category;
+      const categoryCards = document.querySelectorAll('.menu-category-card');
+
+      categoryCards.forEach(card => {
+        if (targetCat === 'all' || card.dataset.category === targetCat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Initial render
+  updateEstimateTray();
 }
 
-function renderBlueprint() {
-  const platform = PLATFORM_DATA[currentPlatform] || PLATFORM_DATA.web;
-  const screen = document.getElementById('blueprint-screen');
-  const timelineBadge = document.getElementById('timeline-badge');
-  const ctaParamsBtn = document.getElementById('configurator-cta-btn');
-
-  if (!screen || !timelineBadge) return;
-
-  let totalDays = (platform.baseSprintWeeks * 5);
-  const activeFeatureObjects = [];
-
-  activeFeatures.forEach(key => {
-    if (FEATURE_DATA[key]) {
-      totalDays += FEATURE_DATA[key].addedDays;
-      activeFeatureObjects.push(FEATURE_DATA[key]);
+function toggleItemSelection(id, name, price, turnaround, isSelected, rowElement) {
+  if (isSelected) {
+    rowElement.classList.add('selected');
+    if (!selectedItems.some(item => item.id === id)) {
+      selectedItems.push({ id, name, price, turnaround });
     }
-  });
-
-  const estimatedWeeks = Math.ceil(totalDays / 5);
-  timelineBadge.textContent = `⏱️ Estimated Turnaround: ~${estimatedWeeks} Weeks`;
-
-  // Build generated architecture text
-  let outputHtml = `
-<span class="bp-green">// ========================================================</span>
-<span class="bp-green">// WISER WORKFLOWS CUSTOM ARCHITECTURE SYNTHESIZER</span>
-<span class="bp-green">// ========================================================</span>
-
-<span class="bp-highlight">[PLATFORM TARGET]</span>  ${platform.name}
-<span class="bp-highlight">[TOPOLOGY]</span>        ${platform.archType}
-<span class="bp-highlight">[CORE STACK]</span>       ${platform.coreTech.join(' • ')}
-
-<span class="bp-highlight">[SELECTED CAPABILITY MODULES]</span> (${activeFeatureObjects.length} Active):
-`;
-
-  if (activeFeatureObjects.length === 0) {
-    outputHtml += `  <span class="bp-amber">> Core baseline build without additional add-on modules.</span>\n`;
   } else {
-    activeFeatureObjects.forEach((feat, idx) => {
-      outputHtml += `  ${idx + 1}. <span class="bp-highlight">${feat.name}</span>\n     ↳ <span style="color: #cbd5e1;">${feat.techSnippet}</span>\n`;
-    });
+    rowElement.classList.remove('selected');
+    selectedItems = selectedItems.filter(item => item.id !== id);
   }
 
-  outputHtml += `
-<span class="bp-green">// ========================================================</span>
-<span class="bp-green">// DETERMINISTIC ENGINEERING GUARANTEE</span>
-<span class="bp-green">// ========================================================</span>
-✓ 100% Bespoke Codebase (Zero Generic Website Builders)
-✓ Fixed-Fee Milestone Agreements with Clear Payback
-✓ Direct Engineering Access to Wesley Barnes & Austin/East Texas HQ
-✓ Sub-second latency guarantees & CI/CD pipeline Included
-`;
+  updateEstimateTray();
+}
 
-  screen.innerHTML = outputHtml;
+function updateEstimateTray() {
+  const listContainer = document.getElementById('tray-selected-list');
+  const totalValElement = document.getElementById('tray-total-val');
+  const countElement = document.getElementById('tray-selected-count');
+  const ctaBtn = document.getElementById('tray-cta-btn');
 
-  // Update CTA link with prefilled parameters
-  if (ctaParamsBtn) {
-    const baseUrl = "https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog";
-    ctaParamsBtn.href = baseUrl;
+  if (!listContainer || !totalValElement) return;
+
+  if (selectedItems.length === 0) {
+    listContainer.innerHTML = '<li class="tray-empty-hint">Click any service from the menu to build your custom project estimate.</li>';
+    totalValElement.textContent = '$0';
+    if (countElement) countElement.textContent = '0 items selected';
+  } else {
+    let total = 0;
+    let listHtml = '';
+
+    selectedItems.forEach(item => {
+      total += item.price;
+      listHtml += `
+        <li class="tray-item">
+          <span class="tray-item-name" title="${item.name}">${item.name}</span>
+          <span class="tray-item-price">$${item.price.toLocaleString()}</span>
+        </li>
+      `;
+    });
+
+    listContainer.innerHTML = listHtml;
+    totalValElement.textContent = `$${total.toLocaleString()}`;
+    if (countElement) countElement.textContent = `${selectedItems.length} service${selectedItems.length > 1 ? 's' : ''} selected`;
+  }
+
+  // Update Google Form Link
+  if (ctaBtn) {
+    const baseFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog";
+    ctaBtn.href = baseFormUrl;
   }
 }
