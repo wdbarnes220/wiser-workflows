@@ -106,7 +106,7 @@ function updateEstimateTray() {
 
   // Update Google Form Link
   if (ctaBtn) {
-    const baseFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog";
+    const baseFormUrl = "https://forms.gle/mCDfRyrq2ioGYq2R8";
     ctaBtn.href = baseFormUrl;
   }
 }

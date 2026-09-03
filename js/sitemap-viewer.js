@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
         <div class="drawer-footer">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScOvz77fx-dA_HrH4h12tHVjQHaUHKuuSvNea_mDgTngeCFjQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="drawer-audit-btn" style="flex: 1;">Request Blueprint for This Page</a>
+          <a href="https://forms.gle/mCDfRyrq2ioGYq2R8" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="drawer-audit-btn" style="flex: 1;">Request Blueprint for This Page</a>
         </div>
       </div>
     `;
