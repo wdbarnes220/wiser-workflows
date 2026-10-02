@@ -47,7 +47,7 @@
 }
 
 .filter-btn.active {
-  background: rgba(0, 240, 255, 0.15);
+  background: rgba(43, 108, 176, 0.15);
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
   font-weight: 600;
@@ -80,7 +80,7 @@
 .view-btn.active {
   background: var(--accent-indigo);
   color: #fff;
-  box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 10px rgba(43, 108, 176, 0.4);
 }
 
 /* --------------------------------------------------------------------------
@@ -111,7 +111,7 @@
   left: 10%;
   right: 10%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.4), rgba(0, 240, 255, 0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(43, 108, 176, 0.4), rgba(43, 108, 176, 0.4), transparent);
   z-index: 0;
 }
 
@@ -166,7 +166,7 @@
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background: rgba(99, 102, 241, 0.15);
+  background: rgba(43, 108, 176, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;

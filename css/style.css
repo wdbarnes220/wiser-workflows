@@ -3,34 +3,34 @@
    ========================================================================== */
 
 :root {
-  /* Color Palette - Clean Professional & Warm Earthy */
-  --bg-primary: #faf9f6;
-  --bg-secondary: #f3f0ea;
-  --bg-tertiary: #ebe7df;
-  --bg-card: rgba(255, 255, 255, 0.85);
+  /* Color Palette - Wiser Workflows Blue & Gold (from WWlogo) */
+  --bg-primary: #f0f4fa;
+  --bg-secondary: #e6edf6;
+  --bg-tertiary: #d8e4f0;
+  --bg-card: rgba(255, 255, 255, 0.88);
   --bg-card-hover: rgba(255, 255, 255, 1);
-  --bg-glass: rgba(255, 255, 255, 0.7);
+  --bg-glass: rgba(240, 244, 250, 0.75);
 
-  --border-subtle: rgba(0, 0, 0, 0.06);
-  --border-medium: rgba(0, 0, 0, 0.12);
-  --border-glow: rgba(226, 114, 91, 0.2);
+  --border-subtle: rgba(15, 32, 53, 0.08);
+  --border-medium: rgba(15, 32, 53, 0.16);
+  --border-glow: rgba(43, 108, 176, 0.25);
 
-  --accent-cyan: #e2725b; /* Terracotta */
-  --accent-cyan-glow: rgba(226, 114, 91, 0.2);
-  --accent-indigo: #2c4c3b; /* Deep Forest Green */
-  --accent-violet: #d4af37; /* Soft Gold */
-  --accent-emerald: #5b8266; /* Sage Green */
-  --accent-emerald-glow: rgba(91, 130, 102, 0.2);
-  --accent-amber: #c5832b; /* Warm Ochre */
+  --accent-cyan: #2b6cb0;           /* Steel Blue (primary) */
+  --accent-cyan-glow: rgba(43, 108, 176, 0.25);
+  --accent-indigo: #0f2035;         /* Deep Navy */
+  --accent-violet: #c8a84b;         /* Logo Gold */
+  --accent-emerald: #3a7dc9;        /* Light Steel Blue */
+  --accent-emerald-glow: rgba(58, 125, 201, 0.22);
+  --accent-amber: #d4a82a;          /* Bright Gold */
 
-  --text-main: #1a1f1c; /* Very dark green-grey */
-  --text-muted: #536258;
-  --text-dim: #7a8a81;
+  --text-main: #0f2035;             /* Deep Navy */
+  --text-muted: #2d4a6a;
+  --text-dim: #5a7a9a;
 
-  --gradient-primary: linear-gradient(135deg, #e2725b 0%, #d4af37 100%);
-  --gradient-emerald: linear-gradient(135deg, #5b8266 0%, #2c4c3b 100%);
-  --gradient-dark-card: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 242, 237, 0.7) 100%);
-  --gradient-glow: radial-gradient(circle at 50% 0%, rgba(226, 114, 91, 0.1), transparent 70%);
+  --gradient-primary: linear-gradient(135deg, #2b6cb0 0%, #c8a84b 100%);
+  --gradient-emerald: linear-gradient(135deg, #3a7dc9 0%, #0f2035 100%);
+  --gradient-dark-card: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(224, 235, 248, 0.7) 100%);
+  --gradient-glow: radial-gradient(circle at 50% 0%, rgba(43, 108, 176, 0.1), transparent 70%);
 
   /* Typography */
   --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -41,8 +41,8 @@
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
-  --shadow-glow-cyan: 0 0 25px rgba(226, 114, 91, 0.2);
-  --shadow-glow-indigo: 0 0 30px rgba(44, 76, 59, 0.15);
+  --shadow-glow-cyan: 0 0 25px rgba(43, 108, 176, 0.2);
+  --shadow-glow-indigo: 0 0 30px rgba(15, 32, 53, 0.15);
 
   /* Radius */
   --radius-sm: 8px;
@@ -94,9 +94,9 @@ body::before {
   width: 100vw;
   height: 100vh;
   background: 
-    radial-gradient(circle at 15% 20%, rgba(226, 114, 91, 0.06) 0%, transparent 45%),
-    radial-gradient(circle at 85% 15%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 50% 80%, rgba(91, 130, 102, 0.06) 0%, transparent 50%);
+    radial-gradient(circle at 15% 20%, rgba(43, 108, 176, 0.07) 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(200, 168, 75, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(58, 125, 201, 0.07) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -183,8 +183,8 @@ button, input, select, textarea {
   align-items: center;
   gap: 0.5rem;
   padding: 0.35rem 1rem;
-  background: rgba(0, 240, 255, 0.08);
-  border: 1px solid rgba(0, 240, 255, 0.25);
+  background: rgba(43, 108, 176, 0.1);
+  border: 1px solid rgba(43, 108, 176, 0.28);
   border-radius: var(--radius-full);
   color: var(--accent-cyan);
   font-size: 0.85rem;
@@ -224,7 +224,7 @@ button, input, select, textarea {
   height: var(--header-height);
   z-index: 1000;
   transition: all var(--transition-normal);
-  background: rgba(250, 248, 245, 0.85);
+  background: rgba(240, 244, 250, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-subtle);
@@ -232,7 +232,7 @@ button, input, select, textarea {
 
 .site-header.scrolled,
 .header.scrolled {
-  background: rgba(250, 248, 245, 0.95);
+  background: rgba(240, 244, 250, 0.97);
   border-bottom-color: var(--border-medium);
   box-shadow: var(--shadow-sm);
 }
@@ -340,7 +340,7 @@ button, input, select, textarea {
 
 .nav-badge {
   display: inline-block;
-  background: rgba(16, 185, 129, 0.15);
+  background: rgba(43, 108, 176, 0.15);
   border: 1px solid var(--accent-emerald);
   color: var(--accent-emerald);
   font-size: 0.7rem;
@@ -389,8 +389,8 @@ button, input, select, textarea {
   align-items: center;
   gap: 0.65rem;
   padding: 0.4rem 1rem;
-  background: rgba(99, 102, 241, 0.12);
-  border: 1px solid rgba(99, 102, 241, 0.35);
+  background: rgba(43, 108, 176, 0.1);
+  border: 1px solid rgba(43, 108, 176, 0.3);
   border-radius: var(--radius-full);
   font-size: 0.85rem;
   font-weight: 600;
@@ -512,7 +512,7 @@ button, input, select, textarea {
 }
 
 .pipe-node {
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(15, 32, 53, 0.88);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 1rem 1.25rem;
@@ -546,9 +546,9 @@ button, input, select, textarea {
 }
 
 .node-icon.trigger { background: rgba(245, 158, 11, 0.2); color: var(--accent-amber); }
-.node-icon.agent { background: rgba(0, 240, 255, 0.2); color: var(--accent-cyan); }
-.node-icon.action { background: rgba(139, 92, 246, 0.2); color: var(--accent-violet); }
-.node-icon.sync { background: rgba(16, 185, 129, 0.2); color: var(--accent-emerald); }
+.node-icon.agent { background: rgba(43, 108, 176, 0.2); color: var(--accent-cyan); }
+.node-icon.action { background: rgba(200, 168, 75, 0.2); color: var(--accent-violet); }
+.node-icon.sync { background: rgba(43, 108, 176, 0.2); color: var(--accent-emerald); }
 
 .node-title {
   font-weight: 600;
@@ -629,7 +629,7 @@ button, input, select, textarea {
 
 .nav-badge {
   display: inline-block;
-  background: rgba(16, 185, 129, 0.15);
+  background: rgba(43, 108, 176, 0.15);
   border: 1px solid var(--accent-emerald);
   color: var(--accent-emerald);
   font-size: 0.7rem;

@@ -59,7 +59,7 @@
 
 .btn-emerald:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 28px rgba(16, 185, 129, 0.5);
+  box-shadow: 0 0 28px rgba(43, 108, 176, 0.5);
 }
 
 .btn-sm {
@@ -127,7 +127,7 @@
 
 .service-card:hover {
   border-color: var(--accent-cyan);
-  box-shadow: 0 10px 30px rgba(0, 240, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(43, 108, 176, 0.15);
   transform: translateY(-5px);
 }
 
@@ -135,8 +135,8 @@
   width: 54px;
   height: 54px;
   border-radius: 14px;
-  background: rgba(0, 240, 255, 0.1);
-  border: 1px solid rgba(0, 240, 255, 0.25);
+  background: rgba(43, 108, 176, 0.1);
+  border: 1px solid rgba(43, 108, 176, 0.28);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,21 +145,21 @@
 }
 
 .service-card.indigo .service-icon-wrap {
-  background: rgba(99, 102, 241, 0.12);
-  border-color: rgba(99, 102, 241, 0.3);
-  color: #a5b4fc;
+  background: rgba(15, 32, 53, 0.1);
+  border-color: rgba(15, 32, 53, 0.25);
+  color: var(--accent-indigo);
 }
 
 .service-card.emerald .service-icon-wrap {
-  background: rgba(16, 185, 129, 0.12);
-  border-color: rgba(16, 185, 129, 0.3);
+  background: rgba(58, 125, 201, 0.12);
+  border-color: rgba(58, 125, 201, 0.3);
   color: var(--accent-emerald);
 }
 
 .service-card.violet .service-icon-wrap {
-  background: rgba(139, 92, 246, 0.12);
-  border-color: rgba(139, 92, 246, 0.3);
-  color: #c4b5fd;
+  background: rgba(200, 168, 75, 0.12);
+  border-color: rgba(200, 168, 75, 0.3);
+  color: var(--accent-violet);
 }
 
 .service-title {
@@ -212,21 +212,21 @@
 }
 
 .badge-live {
-  background: rgba(16, 185, 129, 0.12);
+  background: rgba(58, 125, 201, 0.12);
   color: var(--accent-emerald);
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  border: 1px solid rgba(58, 125, 201, 0.3);
 }
 
 .badge-planned {
-  background: rgba(0, 240, 255, 0.12);
+  background: rgba(43, 108, 176, 0.12);
   color: var(--accent-cyan);
-  border: 1px solid rgba(0, 240, 255, 0.3);
+  border: 1px solid rgba(43, 108, 176, 0.3);
 }
 
 .badge-expansion {
-  background: rgba(139, 92, 246, 0.12);
+  background: rgba(200, 168, 75, 0.12);
   color: var(--accent-violet);
-  border: 1px solid rgba(139, 92, 246, 0.3);
+  border: 1px solid rgba(200, 168, 75, 0.3);
 }
 
 .badge-tag {
@@ -243,7 +243,7 @@
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-xl);
   padding: 3rem;
-  box-shadow: var(--shadow-lg), 0 0 40px rgba(0, 240, 255, 0.08);
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(43, 108, 176, 0.1);
 }
 
 .calc-grid {
@@ -271,8 +271,8 @@
 }
 
 .slider-value-badge {
-  background: rgba(0, 240, 255, 0.12);
-  border: 1px solid rgba(0, 240, 255, 0.3);
+  background: rgba(43, 108, 176, 0.12);
+  border: 1px solid rgba(43, 108, 176, 0.3);
   color: var(--accent-cyan);
   font-family: var(--font-mono);
   font-weight: 700;
@@ -311,7 +311,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 /* Result Cards Container */
 .calc-results-container {
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(15, 32, 53, 0.82);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-lg);
   padding: 2.25rem;
@@ -327,7 +327,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   inset: -1px;
   border-radius: var(--radius-lg);
   padding: 1px;
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.4), transparent, rgba(99, 102, 241, 0.3));
+  background: linear-gradient(135deg, rgba(43, 108, 176, 0.45), transparent, rgba(200, 168, 75, 0.35));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -344,7 +344,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   font-size: clamp(2.25rem, 4vw, 3.25rem);
   font-weight: 800;
   font-family: var(--font-heading);
-  color: var(--accent-cyan);
+  color: var(--accent-violet);
   line-height: 1.1;
   margin-bottom: 0.35rem;
   letter-spacing: -0.02em;
@@ -424,12 +424,12 @@ input[type="range"]::-webkit-slider-thumb:hover {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: rgba(99, 102, 241, 0.12);
-  border: 1px solid rgba(99, 102, 241, 0.25);
+  background: rgba(43, 108, 176, 0.12);
+  border: 1px solid rgba(43, 108, 176, 0.28);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-indigo);
+  color: var(--accent-cyan);
   margin-bottom: 1.25rem;
 }
 
@@ -476,7 +476,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   max-height: 90vh;
   overflow-y: auto;
   padding: 2.5rem;
-  box-shadow: var(--shadow-lg), 0 0 50px rgba(0, 240, 255, 0.15);
+  box-shadow: var(--shadow-lg), 0 0 50px rgba(43, 108, 176, 0.18);
   position: relative;
   transform: scale(0.95);
   transition: transform var(--transition-normal);
