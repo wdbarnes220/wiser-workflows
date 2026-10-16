@@ -85,4 +85,4 @@ Then open your browser to:
 
 ## 📄 License
 
-MIT © [Wiser Workflows](https://wiserworkflows.com)
+MIT © [Wiser Workflows](https://wiserworkflows.online)
